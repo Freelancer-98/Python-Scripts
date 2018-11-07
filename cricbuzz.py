@@ -2,7 +2,6 @@ import requests
 import bs4
 import re
 import time
-import tkinter
 import easygui
 #searching match ID here
 allMatches = 'http://www.cricbuzz.com/api/html/homepage-scag'
