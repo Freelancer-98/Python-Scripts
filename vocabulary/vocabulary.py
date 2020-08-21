@@ -1,7 +1,10 @@
 from bs4 import BeautifulSoup
 import re
+from PyDictionary import PyDictionary
 
 vocab_list = set()
+# result_rows follow the format of => ['word', 'pos' , 'meaning', 'synonym']
+result_rows = []
 
 # Part 1 : Extracting words from APA Citations imported from Kindle
 # Reading the highlights file
@@ -20,6 +23,20 @@ for highlight in highlights_span:
     # Removing all punctuation marks
     word = re.sub(r'[^\w\s]','',word)
     vocab_list.add(word)
-print(vocab_list)
 
-# Part 2 : Extracting words from Google Dictionary Chrome extension
+for word in list(vocab_list)[:3]:
+    rows = []
+    word_meanings = PyDictionary.meaning(word)
+    
+    if(word_meanings):
+        for pos in word_meanings.keys():
+            rows.append([word, pos, "\n".join(word_meanings[pos])])
+        
+        syn = PyDictionary.synonym(word)
+        if syn: rows[0].append(", ".join(syn))
+
+        print(rows)
+        result_rows.append(rows)
+
+
+# TODO : Part 2 : Extracting words from Google Dictionary Chrome extension
