@@ -1,6 +1,7 @@
 from bs4 import BeautifulSoup
 import re
 from PyDictionary import PyDictionary
+from gsheet_ops import get_authenticated_service, gsheet_append
 
 vocab_list = set()
 # result_rows follow the format of => ['word', 'pos' , 'meaning', 'synonym']
@@ -24,19 +25,23 @@ for highlight in highlights_span:
     word = re.sub(r'[^\w\s]','',word)
     vocab_list.add(word)
 
-for word in list(vocab_list)[:3]:
+for word in vocab_list:
     rows = []
     word_meanings = PyDictionary.meaning(word)
     
     if(word_meanings):
         for pos in word_meanings.keys():
-            rows.append([word, pos, "\n".join(word_meanings[pos])])
+            rows.append([word, pos, "● " + "\n● ".join(word_meanings[pos])])
         
         syn = PyDictionary.synonym(word)
         if syn: rows[0].append(", ".join(syn))
 
-        print(rows)
-        result_rows.append(rows)
+        result_rows.extend(rows)
 
+vocab_sheet = '16XwTneCe03ek7Efp3V7YYvkvxRLDsEOvbTzXOMYRBMA'
+vocab_sheet_range = 'Sheet1!A1:D'
+
+service = get_authenticated_service()
+gsheet_append(service, vocab_sheet, vocab_sheet_range, 'INSERT_ROWS', 'USER_ENTERED', {'values': result_rows})
 
 # TODO : Part 2 : Extracting words from Google Dictionary Chrome extension
