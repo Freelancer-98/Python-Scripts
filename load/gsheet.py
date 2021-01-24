@@ -8,10 +8,6 @@ from google.auth.transport.requests import Request
 # If modifying these scopes, delete the file token.pickle.
 SCOPES = ['https://www.googleapis.com/auth/spreadsheets']
 
-# The ID and range of a sample spreadsheet.
-SAMPLE_SPREADSHEET_ID = '16XwTneCe03ek7Efp3V7YYvkvxRLDsEOvbTzXOMYRBMA'
-SAMPLE_RANGE_NAME = 'Sheet1!A1:D'
-
 def get_authenticated_service():
     creds = None
     # The file token.pickle stores the user's access and refresh tokens, and is
@@ -35,24 +31,18 @@ def get_authenticated_service():
     service = build('sheets', 'v4', credentials=creds)
     return service
 
-def gsheet_append(gsheet_service, gsheet_id, gsheet_range, insert_data_option, value_input_option, body):
-    sheet = gsheet_service.spreadsheets()
-    sheet.values().append(spreadsheetId=gsheet_id,
-                            range=gsheet_range,
-                            insertDataOption=insert_data_option,
-                            valueInputOption=value_input_option,
-                            body=body).execute()
+class Gsheet:
 
-def gsheet_get(gsheet_service, gsheet_id, gsheet_range):
-    sheet = gsheet_service.spreadsheets()
-    result = sheet.values().get(spreadsheetId=gsheet_id,
-                                range=gsheet_range).execute()
-    return result.get('values',[])
-
-if __name__ == '__main__':
-    service = get_authenticated_service()
-    gsheet_append(service, SAMPLE_SPREADSHEET_ID, SAMPLE_RANGE_NAME, 'INSERT_ROWS', 'RAW', {'values':[
-                                    ['test','test_pos','test_mean','test_syn']
-                                ]})
-    res = gsheet_get(service, SAMPLE_SPREADSHEET_ID, SAMPLE_RANGE_NAME)
-    print(res)
+    def __init__(self, id, range):
+        self.service = get_authenticated_service()
+        self.sheet = self.service.spreadsheets()
+        self.id = id
+        self.range = range
+    
+    def get(self):
+        return self.sheet.values().get(spreadsheetId=self.id, range=self.range).execute()
+    
+    def append(self, insertDataOption, valueInputOption, body):
+        self.sheet.values().append(spreadsheetId=self.id, range=self.range, 
+                                        insertDataOption=insertDataOption, 
+                                        valueInputOption=valueInputOption, body=body)
