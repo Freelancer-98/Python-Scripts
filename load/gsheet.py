@@ -45,4 +45,4 @@ class Gsheet:
     def append(self, insertDataOption, valueInputOption, body):
         self.sheet.values().append(spreadsheetId=self.id, range=self.range, 
                                         insertDataOption=insertDataOption, 
-                                        valueInputOption=valueInputOption, body=body)
+                                        valueInputOption=valueInputOption, body=body).execute()
