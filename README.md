@@ -73,4 +73,5 @@ Vocabulary
 - Linting and Testing
 - Github Workflows
 
-
+### Archived
+- Check [archive](https://github.com/nilshah98/Scripts/tree/archived) branch for earlier scripts
