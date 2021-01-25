@@ -46,3 +46,7 @@ class Gsheet:
         self.sheet.values().append(spreadsheetId=self.id, range=self.range, 
                                         insertDataOption=insertDataOption, 
                                         valueInputOption=valueInputOption, body=body).execute()
+    
+    def update(self, valueInputOption, body):
+        self.sheet.values().update(spreadsheetId=self.id, range=self.range,
+                                        valueInputOption=valueInputOption, body=body).execute()
