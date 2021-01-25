@@ -10,6 +10,8 @@ def extract_pocket(consumer_key, access_token):
 
 def extract_gsheet(id, range):
     pocket_spreadsheet = Gsheet(id, range)
-    pocket_spreadsheet_data = pocket_spreadsheet.get()['values']
-    with open('source/pocket/loaded.pickle', 'wb') as outfile:
-        pickle.dump(pocket_spreadsheet_data, outfile)
+    pocket_spreadsheet_data = pocket_spreadsheet.get()
+    if 'values' in pocket_spreadsheet_data.keys():
+        pocket_spreadsheet_data = pocket_spreadsheet_data['values']
+        with open('source/pocket/loaded.pickle', 'wb') as outfile:
+            pickle.dump(pocket_spreadsheet_data, outfile)
