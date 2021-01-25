@@ -2,22 +2,12 @@ import pickle
 import json
 import datetime
 
-# Get new articles in the particular format
-def get_new_items():
-    # Get all the article ids
+def get_all_items():
     pocket_all = json.load(open('source/pocket/all.json'))
     pocket_all_articleIds = pocket_all['list'].keys()
 
-    # Get gsheet article ids
-    with open ('source/pocket/loaded.pickle', 'rb') as f:
-        pocket_loaded = pickle.load(f)
-    pocket_loaded_articleIds = set(map(lambda x: x[0], pocket_loaded[1:]))
-
-    # Get new pocket items
-    pocket_new_articleIds = filter(lambda x: x not in pocket_loaded_articleIds, pocket_all_articleIds)
-
     rows = []
-    for id in list(pocket_new_articleIds):
+    for id in list(pocket_all_articleIds):
         row = []
         article = pocket_all['list'][id]
 
