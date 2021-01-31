@@ -16,9 +16,9 @@ def get_new_items():
 
     # Get new pocket items
     pocket_new_articleIds = filter(lambda x: x not in pocket_loaded_articleIds, pocket_all_articleIds)
-
+    
     rows = []
-    for id in list(pocket_new_articleIds):
+    for id in list(pocket_all_articleIds):
         row = []
         article = pocket_all['list'][id]
 
