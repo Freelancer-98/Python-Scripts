@@ -76,7 +76,7 @@ def get_random_older_article():
         time_added = datetime.datetime.fromtimestamp(int(article['time_added']))
         time_read = datetime.datetime.fromtimestamp(int(article['time_read']))
 
-        if (time_now - time_read).days > 7:
+        if int(article['time_read'])!=0 and (time_now - time_read).days > 7:
             stats.append(make_stat(article))
             flag = False
         else:
