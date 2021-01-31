@@ -1,13 +1,14 @@
 import pickle
 import json
 import datetime
+import random
+
+# Get all the article ids
+pocket_all = json.load(open('source/pocket/all.json'))
+pocket_all_articleIds = pocket_all['list'].keys()
 
 # Get new articles in the particular format
 def get_new_items():
-    # Get all the article ids
-    pocket_all = json.load(open('source/pocket/all.json'))
-    pocket_all_articleIds = pocket_all['list'].keys()
-
     # Get gsheet article ids
     with open ('source/pocket/loaded.pickle', 'rb') as f:
         pocket_loaded = pickle.load(f)
@@ -53,3 +54,58 @@ def get_new_items():
 
         rows.append(row)
     return rows
+
+def get_current_week_stats():
+    stats = []
+    for id in list(pocket_all_articleIds):
+        article = pocket_all['list'][id]
+        # format - [article_link, article_name, reading_time, [tags], [annotations]]
+        stat = ['','',0,[],[]]
+
+        time_now = datetime.datetime.today()
+        time_added = datetime.datetime.fromtimestamp(int(article['time_added']))
+        time_read = datetime.datetime.fromtimestamp(int(article['time_read']))
+        if (time_now - time_read).days <= 7:
+            stat[0] = f"https://getpocket.com/read/{article['item_id']}"
+            stat[1] = article['resolved_title']
+            if 'time_to_read' in article.keys():
+                stat[2] = article['time_to_read']
+            if 'tags' in article.keys():
+                stat[3].extend(article['tags'].keys())
+            if 'annotations' in article.keys():
+                stat[4].extend(list(map(lambda annotation: annotation['quote'], article['annotations'])))
+            stats.append(stat)
+    return stats
+
+def get_random_older_article():
+    stats = []
+    flag = True
+    stat = ['','',0,[],[]]
+
+    while flag:
+        articleid = random.choice(list(pocket_all['list'].keys()))
+        article = pocket_all['list'][articleid]
+
+        time_now = datetime.datetime.today()
+        time_added = datetime.datetime.fromtimestamp(int(article['time_added']))
+        time_read = datetime.datetime.fromtimestamp(int(article['time_read']))
+
+        if (time_now - time_read).days > 7:
+            stat[0] = f"https://getpocket.com/read/{article['item_id']}"
+            stat[1] = article['resolved_title']
+            if 'time_to_read' in article.keys():
+                stat[2] = article['time_to_read']
+            if 'tags' in article.keys():
+                stat[3].extend(article['tags'].keys())
+            if 'annotations' in article.keys():
+                stat[4].extend(list(map(lambda annotation: annotation['quote'], article['annotations'])))
+            stats.append(stat)
+            flag = False
+        else:
+            continue
+    return stats
+
+
+
+
+
