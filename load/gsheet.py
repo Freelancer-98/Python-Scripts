@@ -50,3 +50,6 @@ class Gsheet:
     def update(self, valueInputOption, body):
         self.sheet.values().update(spreadsheetId=self.id, range=self.range,
                                         valueInputOption=valueInputOption, body=body).execute()
+    
+    def clear (self):
+        self.sheet.values().clear(spreadsheetId=self.id, range=self.range).execute()
