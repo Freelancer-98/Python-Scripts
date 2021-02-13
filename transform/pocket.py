@@ -51,7 +51,7 @@ def get_new_items():
         rows.append(row)
     return rows
 
-def get_current_week_stats():
+def get_past_x_days_stats(d):
     stats = []
     for id in list(pocket_all_articleIds):
         article = pocket_all['list'][id]
@@ -60,11 +60,11 @@ def get_current_week_stats():
         time_added = datetime.datetime.fromtimestamp(int(article['time_added']))
         time_read = datetime.datetime.fromtimestamp(int(article['time_read']))
 
-        if (time_now - time_read).days <= 7:
+        if (time_now - time_read).days <= d:
             stats.append(make_stat(article))
     return stats
 
-def get_random_older_article():
+def get_random_older_article(d):
     stats = []
     flag = True
 
@@ -76,7 +76,7 @@ def get_random_older_article():
         time_added = datetime.datetime.fromtimestamp(int(article['time_added']))
         time_read = datetime.datetime.fromtimestamp(int(article['time_read']))
 
-        if int(article['time_read'])!=0 and (time_now - time_read).days > 7:
+        if int(article['time_read'])!=0 and (time_now - time_read).days > d:
             stats.append(make_stat(article))
             flag = False
         else:
