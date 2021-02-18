@@ -11,7 +11,7 @@ pocket_all_articleIds = pocket_all['list'].keys()
 for id in list(pocket_all_articleIds):
     article = pocket_all['list'][id]
 
-    if 'author' not in article.keys(): article['authors'] = {}
+    if 'authors' not in article.keys(): article['authors'] = {}
     if 'tags' not in article.keys(): article['tags'] = {}
     if 'annotations' not in article.keys(): article['annotations'] = []
     if 'time_to_read' not in article.keys(): article['time_to_read'] = 0
