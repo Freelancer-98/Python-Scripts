@@ -1,10 +1,18 @@
-import pockexport.export
+import pocket
 import json
 from datetime import datetime
 
 def extract_pocket(consumer_key, access_token):
+
+    # 00. Create a modified version of get function to take more arguments
+    @pocket.method_wrapper
+    def get(self, **kwargs):
+        pass
+
     # 01. Extracting everything
-    pocket_data = pockexport.export.get_json(consumer_key=consumer_key, access_token=access_token)    
+    pocket_instance = pocket.Pocket(consumer_key, access_token)
+    pocket_data = get(pocket_instance, tags=1, annotations=1, authors=1, 
+                    state='archive', sort='newest', detailType='complete')[0]
 
     # 02. Cleaning data
     # Structure => { ID: { Date Read, Title, Author, Link, Tags, Annotations, Favorite, Source }, ... } 

@@ -1,2 +1,0 @@
-pocket==0.3.6
-pockexport==0.0.0
