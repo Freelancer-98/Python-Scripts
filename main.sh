@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -ex
+
 repo_uri="https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
 remote_name="origin"
 main_branch="master"
@@ -8,18 +10,23 @@ gh_pages_branch="gh-pages"
 git config user.name "$GITHUB_ACTOR"
 git config user.email "${GITHUB_ACTOR}@bots.github.com"
 
+git checkout "$gh_pages_branch"
+set +e
+rm -rf data/tmp
+
 git checkout "$main_branch"
 
-rm -r tmp/
+rm -rf tmp/
 mkdir tmp
 python main.py
 
 git checkout "$gh_pages_branch"
 
 cp -r tmp data
-rm -r tmp/
+rm -rf tmp/
 
 git add .
+
 
 if git status | grep 'new file\|modified'
 then
