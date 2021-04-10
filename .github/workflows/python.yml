@@ -4,6 +4,9 @@
 name: Update Pocket Data
 
 on:
+  schedule:
+    # every day at 1AM
+    - cron: "0 1 * * *"
   push:
     branches: [ master ]
   pull_request:
