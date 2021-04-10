@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-set -eu
-
 repo_uri="https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
 remote_name="origin"
 main_branch="master"
@@ -12,6 +10,7 @@ git config user.email "${GITHUB_ACTOR}@bots.github.com"
 
 git checkout "$main_branch"
 
+rm -r tmp/
 mkdir tmp
 python main.py
 
@@ -21,7 +20,6 @@ cp -r tmp data
 rm -r tmp/
 
 git add .
-set +e  # Grep succeeds with nonzero exit codes to show results.
 
 if git status | grep 'new file\|modified'
 then
