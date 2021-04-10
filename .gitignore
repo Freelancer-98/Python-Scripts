@@ -1,6 +1,7 @@
 # Data source
 source/
 data/
+tmp/
 
 led / optimized / DLL files
 __pycache__/
