@@ -42,5 +42,5 @@ def extract_pocket(consumer_key, access_token):
             pocket_clean[id] = {'time_read': time_read, 'title': title, 'author': author, 'link': link, 
                                 'tags': tags, 'annotations': annotations, 'favorite': favorite, 'source': source}
     
-    with open('pocket.json', 'w+') as outfile:
+    with open('tmp/pocket.json', 'w+') as outfile:
         json.dump(pocket_clean,outfile,indent=2)
