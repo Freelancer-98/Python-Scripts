@@ -13,7 +13,7 @@ git config user.email "${GITHUB_ACTOR}@bots.github.com"
 git checkout "$main_branch"
 
 mkdir tmp
-python3 main.py
+python main.py
 
 git checkout "$gh_pages_branch"
 
