@@ -11,7 +11,6 @@ git config user.name "$GITHUB_ACTOR"
 git config user.email "${GITHUB_ACTOR}@bots.github.com"
 
 git checkout "$gh_pages_branch"
-set +e
 rm -rf data/tmp
 
 git checkout "$main_branch"
@@ -22,7 +21,7 @@ python main.py
 
 git checkout "$gh_pages_branch"
 
-cp -r tmp data
+cp -r tmp/* data
 rm -rf tmp/
 
 git add .
