@@ -1,9 +1,12 @@
 # This workflow will install Python dependencies, run tests and lint with a single version of Python
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-python-with-github-actions
 
-name: Python application
+name: Send Email
 
 on:
+  schedule:
+    # every saturday at 4AM
+    - cron: "0 4 * * SAT"
   push:
     branches: [ master ]
   pull_request:
@@ -24,7 +27,7 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-    - name: Update pocket list
+    - name: Send email
       run: |
           python ./main.py -n
       env:
