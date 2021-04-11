@@ -6,31 +6,10 @@
     "link": "https://blog.covid19india.org/2020/09/04/architecture/",
     "tags": [
       "programming__automation",
-      "web",
       "web__backend"
     ],
     "annotations": [],
     "favorite": 1,
-    "source": "pocket"
-  },
-  "3268049121": {
-    "time_read": "2021-02-28",
-    "title": "Notes on Addressing Supply Chain Vulnerabilities \u2013 The Mozilla Blog",
-    "author": [],
-    "link": "https://blog.mozilla.org/blog/2021/02/27/notes-on-addressing-supply-chain-vulnerabilities",
-    "tags": [
-      "security",
-      "tech"
-    ],
-    "annotations": [
-      "The second reason is that some components are critical because they perform critical functions. For instance, no matter how much you sandbox OpenSSL, you still have to worry about the fact that it\u2019s handling your sensitive data, and so if compromised it might leak that. Fortunately, this class of critical components is smaller, but it\u2019s non-zero.",
-      "When looked at from this perspective, it\u2019s clear that we have a technology problem: There\u2019s no good reason for individual components to have this much power. Rather, they should only have the capabilities they need to do the job they are intended to to (the technical term is least privilege); it\u2019s just that the software tools we have don\u2019t do a good job of providing this property. This is a situation which has long been recognized in complicated pieces of software like Web browsers, which employ a technique called \u201cprocess sandboxing\u201d (pioneered by Chrome) in which the code that interacts with the Web site is run in its own \u201csandbox\u201d and has limited abilities to interact with your computer. When it wants to do something that it\u2019s not allowed to do, it talks to the main Web browser code and asks it to do it for it, thus allowing that code to enforce the rules without being exposed to vulnerabilities in the rest of the browser.",
-      " First, the APIs that we have to work with aren\u2019t sufficiently fine-grained. Consider the case of a component which is designed to let you open and process files on the disk; this necessarily needs to be able to open files, but what stops it from reading your Bitcoins instead of the files that the programmer wanted it to read? It might be possible to create a capability list that includes just reading certain files, but that\u2019s not the API the operating system gives you, so now we need to invent something. There are a lot of cases like this, so things get complicated.",
-      "Something we have been looking at internally at Mozilla is a way for those projects to tag the dependencies they use and depend on. The way that this would work is that each project would then be tagged with a set of other projects which used it (e.g., \u201cFirefox uses this crate\u201d). Then when you are considering using a component you could look to see who else uses it, which gives you some measure of confidence. Of course, you don\u2019t know what sort of auditing those organizations do, but if you know that Project X is very security conscious and they use component Y, that should give you some level of confidence. This is really just a automating something that already happens informally: people judge components by who else uses them. ",
-      "What\u2019s the standard for not being anonymous? That you have an e-mail address? A Web page? A DUNS number?[3] None of these seem particularly difficult for a dedicated attacker to fake and of course the more strict you make the requirements the more it\u2019s a burden for the (vast majority) of legitimate developers.",
-      "More recently, we have been experimenting with a technology called called RLBox developed by researchers at UCSD, UT Austin, and Stanford which allows regular programs such as Firefox to run sandboxed components. The basic idea behind both of these is the same: use static compilation techniques to ensure that the component is memory-safe (i.e., cannot reach outside of itself to touch other parts of the program) and then give it only the capabilities it needs to do its job."
-    ],
-    "favorite": 0,
     "source": "pocket"
   },
   "3221634186": {
@@ -41,7 +20,7 @@
     ],
     "link": "https://invertedpassion.com/how-money-works/",
     "tags": [
-      "finance"
+      "money"
     ],
     "annotations": [
       "Money is simply a commodity with the widest price discovery against all other commodities and because of that everyone accepts it. That is what gives money its purchasing power.",
@@ -72,150 +51,7 @@
       "To solve this problem, people gradually start accepting a commodity that is divisible into smaller units and which they believe are widely demanded. Take butter for example. You accept it in exchange for the shoes you\u2019ve made because you know you can find someone who wants butter easily and can pay him with a fraction of the butter weight you think is worth what that person is selling.",
       "By manipulating these limits on reserves and via other regulations (such as deciding interbank loan rates), the central bank (which is an arm of the government) directly determines how much money is out there in the economy and hence control the rate of inflation in the economy."
     ],
-    "favorite": 0,
-    "source": "pocket"
-  },
-  "3243598600": {
-    "time_read": "2021-02-17",
-    "title": "What went wrong with America\u2019s $44 million vaccine data system?",
-    "author": [
-      "Cat Ferguson"
-    ],
-    "link": "https://www.technologyreview.com/2021/01/30/1017086/cdc-44-million-vaccine-data-vams-problems/",
-    "tags": [
-      "failures",
-      "management",
-      "tech"
-    ],
-    "annotations": [],
-    "favorite": 0,
-    "source": "pocket"
-  },
-  "3188123813": {
-    "time_read": "2021-02-17",
-    "title": "We're Never Going Back",
-    "author": [
-      "Packy McCormick"
-    ],
-    "link": "https://notboring.substack.com/p/were-never-going-back",
-    "tags": [
-      "future",
-      "management",
-      "remote-work",
-      "tech"
-    ],
-    "annotations": [
-      "More Consumer Travel, Less Business Travel. If more employees can work from anywhere and save money by not commuting and eating at home every day, they\u2019ll be able to travel more frequently. A higher proportion of travel will be for pleasure instead of business, meaning that consumer-focused companies like Airbnb look more attractive than hotels, which generate a lot of revenue from business travel and corporate events.",
-      " Remote will unbundle work and social.",
-      "It\u2019s hard to blame him. Desktop computers and floppy disks were the norm. Laptops were clunky. And the whole ecosystem of wifi, lithium-ion batteries, coffee shops, cloud-based software, and the millions of other things that combine to make laptops useful wasn\u2019t yet in place. A laptop was a poor substitute for the real thing.",
-      "The Metaverse. People will turn to other online spaces, too. Gaming will continue its meteoric rise, and the Metaverse will be pulled forward. I would bet on Tencent (Epic, Discord, and dozens of gaming investments), Unity, Snap, and the impending Roblox IPO",
-      "Partially, that\u2019s because the burden of proof is always on the new thing; fads come and go, but at any moment, the way things are is the likeliest suspect for the way things are going to be. Partially, it\u2019s because the new thing is clunky; of course it is, it\u2019s new. And partially, it\u2019s because all of the other things that will spring up around the new thing haven\u2019t sprung up yet.",
-      "In other words, the decision isn\u2019t up to the traditional decision-makers. The possibility of Remote work will create a liquid global talent marketplace, unshackling employment and geography and giving the best employees more optionality than they\u2019ve ever had. Forward-thinking companies, too, will have more qualified candidates to choose from than ever before.",
-      "Because of the biggest exogenous shock to the system in decades, remote work, which can be viewed comprehensively as a technology, hasn\u2019t gotten the chance to methodically work its way through the Adoption S-Curve. Instead, like Snapchat, Laptops, and Bitcoin, it\u2019s going through one of my favorite frameworks: the Gartner Hype Cycle",
-      "This is where things start getting really wild. Unshackled by the office\u2019s location, people will move where they want to move, often out of expensive cities and into more affordable towns with better weather. Those are first-and second-order effects. Some third-order effect might be that because they\u2019re saving more money, they have more money to invest, and the trends that I wrote about in Software is Eating the Markets towards more retail investment in stocks, art, real estate, and more will accelerate.",
-      "If you choose to Return, you\u2019re essentially making a bet that the benefits of all being in the same office every day outweighs the risks of attracting lesser talent and potentially losing your best employees. Mayyyyybe you make that trade if you assume that physical and digital solutions will remain exactly as they are today. But they won\u2019t. They\u2019re already improving.",
-      "Remote\u2019s ecosystem is underdeveloped. We\u2019ve had to shoehorn pre-Remote solutions to fit a new paradigm, and the impending wave of new tools hasn\u2019t yet arrived."
-    ],
-    "favorite": 0,
-    "source": "pocket"
-  },
-  "3258867784": {
-    "time_read": "2021-02-17",
-    "title": "An Explainer on SPACs",
-    "author": [],
-    "link": "https://finshots.in/archive/an-explainer-on-spacs/",
-    "tags": [
-      "finance",
-      "management"
-    ],
-    "annotations": [
-      "So in summary, SPACs help other companies IPO in a relatively short amount of time. And they eliminate some of the uncertainties involved in the process. At least that's what they claim"
-    ],
-    "favorite": 0,
-    "source": "pocket"
-  },
-  "1962731577": {
-    "time_read": "2021-02-10",
-    "title": "The Biggest Killer of Investment Returns",
-    "author": [
-      "Vishal Khandelwal"
-    ],
-    "link": "https://www.safalniveshak.com/biggest-killer-investment-returns/",
-    "tags": [
-      "anthropology",
-      "finance",
-      "psychology"
-    ],
-    "annotations": [],
-    "favorite": 0,
-    "source": "pocket"
-  },
-  "3248660539": {
-    "time_read": "2021-02-10",
-    "title": "How to Eat an Elephant, One Atomic Concept at a Time",
-    "author": [
-      "Kevin"
-    ],
-    "link": "https://kwokchain.com/2021/02/05/atomic-concepts/",
-    "tags": [
-      "management",
-      "product-management",
-      "startup",
-      "tech"
-    ],
-    "annotations": [
-      "Images were a component\u2014not the essence\u2014of the job users were trying to accomplish.",
-      "Understanding the phases of market transition and what drives them is a universal process worth examining.",
-      "As a founder, nobody is going to understand the full nuance of your company like you will. Everyone else does see a simplified, compressed, and sadly imperfect shadow of your company. Founders repeatedly underestimate the degree to which their products are complex and opaque to outsiders, because they have it fully loaded in cache. They have seen every iteration and revision and imagined in painful detail all the alternate lives their product could have lived.",
-      "Similarly, the customers are very different. Many of the people now doing what is, in essence, design work don\u2019t think of themselves as designers. They just have a very specific thing they want to create, with the least friction possible.",
-      " Like memes, simplicity is what makes them so transmissible.",
-      "Other times the scale or dynamics of a market shift enough to make a product no longer work despite having been a great fit.",
-      "There are many causes of changing customer needs. Often there are new and growing segments of customers with different use cases.",
-      "Often the smell test of a company is how easily it can be dimensionally reduced.",
-      "The internet drove entirely new design use cases.",
-      "Changing customer needs are the largest source of entropy in markets. When customer needs rapidly change, there is less advantage in being an incumbent. Instead, legacy companies are left with all the overhead and a product that no longer is what customers want.",
-      "Market entropy is good for new entrants.",
-      "The best products map to how customers think about their workflow. They match the abstraction level of their customers: not too high that it\u2019s unusable, but not too low that it\u2019s hard to use easily or extend in more complex ways.",
-      "The best companies introduce better atomic concepts and help push their customers forward. Strong enough products will have ecosystems around them whether or not the companies actively manage it. The best companies don\u2019t just benefit from these ecosystems, they build their platforms to enable and direct these ecosystems in ways that empower their customers more.",
-      " It\u2019s essential for founders and companies themselves to regularly do this refactoring. Just as companies build up technical debt, so too do they build up narrative debt.",
-      "They choose the right atomic concepts.\n\nThese are the core concepts around which the entire product is built. They not only align with how customers think of their workflow, but often crystallizes for customers how they ought to. Great atomic concepts are honed and then extended and built upon in more complex compounds that\u2026well for lack of a better word\u2026compound.",
-      "This is just one example of how companies can use platform network effects to extend and defend their beachhead. There are few sources of defensibility stronger than the cross-side network effects of platforms. It makes it hard for any new competitors to get traction. Without a large enough user base, a new platform can\u2019t attract developers to build on top of it. As a result, new competitors also lack the ecosystem of add-ons to meet all the needs of and attract users. This is why platforms are so enduring. They allow companies to scale the needs they meet beyond what\u2019s possible for a single company and they create chicken and egg problems for any competitor hoping to follow."
-    ],
     "favorite": 1,
-    "source": "pocket"
-  },
-  "3194728057": {
-    "time_read": "2021-02-07",
-    "title": "APIs All the Way Down",
-    "author": [
-      "Packy McCormick"
-    ],
-    "link": "https://notboring.substack.com/p/apis-all-the-way-down",
-    "tags": [
-      "entrepreneur",
-      "finance",
-      "startup",
-      "strategy",
-      "tech"
-    ],
-    "annotations": [
-      "This is the beauty of API-first companies. They allow customers to focus on the one or two things that differentiate their businesses, while plugging in best-in-class solutions everywhere else.",
-      "Here\u2019s the hard thing about easy things: if everyone can do something, there\u2019s no advantage to doing it, but you still have to do it anyway just to keep up.",
-      "A woman approaches Picasso in a restaurant, asks him to sketch something on a napkin for her, and tells him that she\u2019d be happy to pay whatever it\u2019s worth. He obliges, scribbles something quickly, and asks for $10,000. \u201c$10,000!?\u201d the woman replies in shock, \u201cBut you just did that in 30 seconds!\u201d \u201cNo,\u201d Picasso tells the woman, \u201cIt has taken me 40 years to do that.\u201d",
-      "Shopify is a really smart company. It wouldn\u2019t tie its own hands for no good reason. Instead, it made a deliberate, strategic choice to focus on the things that it does best, and to plug in Stripe for all of the things that it does best. That\u2019s what third-party APIs enable their customers to do.",
-      "That\u2019s one way to think about an API. APIs let companies leverage years of other companies\u2019 work in seconds.",
-      "Identifying the \u201cone or two critical issues\u201d (Diagnosis) is just one piece of the problem. Good Strategy also involves defining a guiding policy and coherent actions.",
-      "It\u2019s that once they\u2019re integrated into a customer\u2019s product, API-first companies have incredibly deep moats. Specifically, they benefit from network effects, economies of scale, and high switching costs.",
-      "Vendor APIs: Give customers the full superpowers of an entire company in a few lines of code.",
-      "I don\u2019t think that Rumelt and Lawson would disagree, actually. Both point at the same idea, that what people call \u201cstrategy\u201d is often a bunch of fancy words and falsely precise goals that obfuscate the core purpose of the business: serving customers in a differentiated way",
-      "Strategy is about knowing when to say no, so that when you say yes, you can go all-in.",
-      "Importantly, it means that everyone who works for those companies went there to solve those problems. Whereas an engineer at Uber who signed up to change transportation would be pissed off if she were assigned to work on background checks, because it\u2019s not the company\u2019s core product, an engineer at Checkr is stoked to work on background checks, because that\u2019s what the company is all about!",
-      "Purchasing Decision. Traditional SaaS is a department-head, IT, or exec purchasing decision, while API-first is typically a product and engineering purchasing decision.",
-      "Scale. API-first companies serve thousands or millions of customers, so they\u2019re able to justify small improvements that build up to an incredible product over time. Plaid can spend the effort to integrate with even very small financial institutions, for example, since there will likely be thousands of people who use that bank across all of the products that use Plaid.",
-      "Anything that just takes complex code and simplifies it is probably at risk of being upstreamed by competitors or new entrants. The magic of companies like Stripe and Twilio is that in addition to elegant software, they do the schlep work in the real world that other people don\u2019t want to do. Stripe does software plus compliance, regulatory, risk, and bank partnerships. Twilio does software plus carrier and telco deals across the world, deliverability optimization, and unification of all customer communication touchpoints.",
-      "Picking the right API vendor is like the hiring decision on steroids. When a company chooses to plug in a third-party API, it\u2019s essentially deciding to hire that entire company to handle a whole function within its business."
-    ],
-    "favorite": 0,
     "source": "pocket"
   },
   "3248300194": {
@@ -226,10 +62,7 @@
     ],
     "link": "https://www.zainrizvi.io/blog/the-interviewing-advice-no-one-shares/",
     "tags": [
-      "career-advice",
-      "interview-tips",
-      "psychology",
-      "tech"
+      "interview--tips"
     ],
     "annotations": [
       "Recruiters aren\u2019t evaluating you technically, not by the time you pick up the phone anyways. Their decision on whether you have the technical chops to be worth interviewing was made well before that call.",
@@ -258,8 +91,8 @@
     "author": [],
     "link": "https://chriskiehl.com/article/thoughts-after-6-years",
     "tags": [
-      "dev-tips",
-      "tech"
+      "programming--tips",
+      "programming__debugging"
     ],
     "annotations": [
       "YAGNI, SOLID, DRY. In that order.",
@@ -283,8 +116,7 @@
     "author": [],
     "link": "https://finshots.in/archive/the-incentive-problem-with-mdr/",
     "tags": [
-      "credit-cards",
-      "finance"
+      "money__cards"
     ],
     "annotations": [
       "They still have to do the tango. The only difference\u200a\u2014\u200aThey have to bear the cost themselves. So they did the only thing they could. They lobbied. The Indian Banks\u2019 Association (IBA) sought compensation to the tune of \u20b92000 crore a year, to run the RuPay/UPI infrastructure.",
@@ -300,51 +132,9 @@
     "author": [],
     "link": "https://www.reddit.com/r/changemyview/comments/jslj7j/cmv_if_a_mental_illness_means_you_behave_in_a_way/",
     "tags": [
-      "changemyview",
-      "health",
-      "ifttt",
-      "mental-health",
-      "psychology",
-      "reddit"
+      "psychology"
     ],
     "annotations": [],
-    "favorite": 0,
-    "source": "pocket"
-  },
-  "3232552030": {
-    "time_read": "2021-01-19",
-    "title": "'Miya bhai' Siraj lives his father's dream to the fullest",
-    "author": [
-      "Sidharth Monga"
-    ],
-    "link": "https://www.espncricinfo.com/story/australia-vs-india-miya-bhai-mohammed-siraj-lives-his-father-s-dream-to-the-fullest-1248327",
-    "tags": [
-      "real-life-stories",
-      "sports"
-    ],
-    "annotations": [],
-    "favorite": 0,
-    "source": "pocket"
-  },
-  "3226440037": {
-    "time_read": "2021-01-13",
-    "title": "BABA Black Sheep",
-    "author": [
-      "Packy McCormick"
-    ],
-    "link": "https://notboring.substack.com/p/baba-black-sheep",
-    "tags": [
-      "entrepreneur",
-      "finance",
-      "startup",
-      "tech"
-    ],
-    "annotations": [
-      "Stay locally focused: Taobao built a cute product with animated characters to appeal to younger Chinese shoppers who would fuel its growth, while eBay tried to fit its China site into the same architecture and brand that it used globally.",
-      "counter-positioning is \u201cthe practice of developing your business model such that incumbents have conflicting incentives preventing them to compete effectively.\u201d",
-      "Declare war on eBay to get free press and piggyback off the larger company\u2019s ad budget\n\n\n",
-      "Don\u2019t make personal attacks on Meg Whitman or play the nationalism card"
-    ],
     "favorite": 0,
     "source": "pocket"
   },
@@ -354,10 +144,7 @@
     "author": [],
     "link": "https://overreacted.io/why-do-hooks-rely-on-call-order/",
     "tags": [
-      "programming",
-      "react",
-      "tech",
-      "web"
+      "web__frontend"
     ],
     "annotations": [],
     "favorite": 0,
@@ -371,10 +158,7 @@
     ],
     "link": "https://medium.com/@dan_abramov/making-sense-of-react-hooks-fdbde8803889",
     "tags": [
-      "programming",
-      "react",
-      "tech",
-      "web"
+      "web__frontend"
     ],
     "annotations": [],
     "favorite": 0,
@@ -388,44 +172,10 @@
     ],
     "link": "https://www.collaborativefund.com/blog/standing/",
     "tags": [
-      "finance",
-      "investing",
+      "money__investing",
       "psychology"
     ],
     "annotations": [],
-    "favorite": 0,
-    "source": "pocket"
-  },
-  "3208565127": {
-    "time_read": "2021-01-08",
-    "title": "100 Tips for a Better Life",
-    "author": [
-      "Ideopunk"
-    ],
-    "link": "https://www.lesswrong.com/posts/7hFeMWC6Y5eaSixbD/100-tips-for-a-better-life",
-    "tags": [
-      "career-advice",
-      "finance",
-      "life-tips",
-      "resource",
-      "time-management"
-    ],
-    "annotations": [],
-    "favorite": 0,
-    "source": "pocket"
-  },
-  "3149642527": {
-    "time_read": "2021-01-08",
-    "title": "How Satya Nadella turned Microsoft around",
-    "author": [],
-    "link": "https://www.economist.com/briefing/2020/10/22/how-satya-nadella-turned-microsoft-around",
-    "tags": [
-      "finance",
-      "tech"
-    ],
-    "annotations": [
-      "Microsoft\u2019s response\u2014leaning heavily on customers not to defect\u2014may work in the short run. But as the pace of change in the technology industry accelerates, thanks to abundant brainpower and oodles of capital, customers may put innovation ahead of loyalty to long-standing providers. One successful reinvention is unlikely to be enough"
-    ],
     "favorite": 0,
     "source": "pocket"
   },
@@ -435,24 +185,7 @@
     "author": [],
     "link": "https://hbr.org/2020/11/how-apple-is-organized-for-innovation",
     "tags": [
-      "management",
-      "tech"
-    ],
-    "annotations": [],
-    "favorite": 0,
-    "source": "pocket"
-  },
-  "3193093478": {
-    "time_read": "2020-12-13",
-    "title": "Hi, we\u2019re David Head and Adam Paine, specialists in anxiety and motivation. AMA",
-    "author": [],
-    "link": "https://www.reddit.com/r/IAmA/comments/k78l04/hi_were_david_head_and_adam_paine_specialists_in/",
-    "tags": [
-      "iama",
-      "ifttt",
-      "mental-health",
-      "psychology",
-      "reddit"
+      "business__management"
     ],
     "annotations": [],
     "favorite": 0,
@@ -466,9 +199,8 @@
     ],
     "link": "https://www.npr.org/sections/money/2020/12/08/943812834/what-is-your-time-worth",
     "tags": [
-      "experiments",
       "psychology",
-      "time"
+      "time__research"
     ],
     "annotations": [],
     "favorite": 0,
@@ -482,19 +214,22 @@
     ],
     "link": "http://www.collaborativefund.com/blog/the-big-lessons-from-history/",
     "tags": [
-      "life-tips",
-      "management",
+      "history",
       "psychology"
     ],
     "annotations": [
       " Calm plants the seeds of crazy.",
+      "Lesson #4: Important things rarely have one cause.",
       "When there are no recessions, people get confident. When they get confident they take risks. When they take risks, you get recessions.",
+      "Lesson #5: Risk is what you don\u2019t see.",
       "Two things have plunged in the last 80 years: death from bacterial infection, and funding/development of new antibiotics that will combat future infections",
       "Everyone wants to believe they\u2019re thinking independently, with an understanding of how things work and why things are happening. But everyone has only seen the world through the narrow lens of their own experiences and social circles",
       "It\u2019s weird to think that Covid would be easier to deal with if we hadn\u2019t made so much infectious-disease progress over the last century. But we did. So now it\u2019s a generational nightmare. Calm plants the seeds of crazy.\n\nA lot of things work like that.",
       " Calm plants the seeds of crazy.",
+      "Lesson #2: Progress requires optimism and pessimism to coexist.",
       "Nothing separates us from human beings in earlier eras than how much less disease affects us. If we moderns lived for one year with the sort of death rates our pre\u2013industrial age ancestors perpetually lived with, we\u2019d be in societal shock.",
       "In 1918 humans had never viewed a virus under a microscope. But \u201cwear a mask and keep your distance\u201d they understood better than we do today.",
+      "Lesson #3: People believe what they want to believe, see what they want to see, and hear what they want to hear.",
       "it\u2019s too hard to accept because it makes you feel like you\u2019re not in control",
       " When met with the problem, \u201cEither the model of how I think the world works is wrong, or this other person is wrong,\u201d the path of least resistance is always to point at the other person.",
       "It\u2019s hard to convince someone that they\u2019re in danger of a risk they assume had been defeated. Some of why \u201cit\u2019s just the flu\u201d became a phrase this year is because it\u2019s normal to cling to something you\u2019re familiar with when confronted with something you\u2019re not.",
@@ -514,9 +249,8 @@
     ],
     "link": "https://solovyov.net/blog/2020/api-pagination-design/",
     "tags": [
-      "database",
-      "programming",
-      "sql"
+      "programming__database",
+      "web__performance"
     ],
     "annotations": [],
     "favorite": 0,
@@ -530,9 +264,7 @@
     ],
     "link": "https://apoorvagovind.substack.com/p/how-to-waste-your-career-one-comfortable",
     "tags": [
-      "career-advice",
-      "frameworks",
-      "tech"
+      "career--tips"
     ],
     "annotations": [],
     "favorite": 0,
@@ -546,6 +278,7 @@
     ],
     "link": "https://www.bbc.com/worklife/article/20190801-the-trick-that-makes-you-overspend",
     "tags": [
+      "money",
       "psychology"
     ],
     "annotations": [
@@ -564,24 +297,6 @@
     ],
     "link": "https://markmanson.net/how-to-overcome-loneliness",
     "tags": [
-      "life-tips",
-      "politics",
-      "psychology"
-    ],
-    "annotations": [],
-    "favorite": 0,
-    "source": "pocket"
-  },
-  "3151207364": {
-    "time_read": "2020-10-27",
-    "title": "Find Freedom of the Mountain in Everything You Do",
-    "author": [
-      "Leo Babauta"
-    ],
-    "link": "https://zenhabits.net/freeing/",
-    "tags": [
-      "life-tips",
-      "productivity",
       "psychology"
     ],
     "annotations": [],
@@ -594,34 +309,10 @@
     "author": [],
     "link": "https://www.reddit.com/r/GetMotivated/comments/5950tm/text_i_just_finished_the_online_coursera_course/",
     "tags": [
-      "getmotivated",
-      "ifttt",
-      "learning",
-      "reddit",
-      "resource"
+      "learning--tips"
     ],
     "annotations": [],
     "favorite": 1,
-    "source": "pocket"
-  },
-  "3103743180": {
-    "time_read": "2020-09-28",
-    "title": "At 31, I have just weeks to live. Here's what I want to pass on",
-    "author": [
-      "Elliot Dallen"
-    ],
-    "link": "https://www.theguardian.com/commentisfree/2020/sep/07/terminal-cancer-live-cancer-life-death",
-    "tags": [
-      "life-tips"
-    ],
-    "annotations": [
-      "Fourth, do something for others.",
-      "At this point I should say a word to my friends. Being this ill complicates all relationships. The rut I found myself in a few weeks back hasn\u2019t lifted. I\u2019ve definitely been \u201cfeeling the victim\u201d a lot more than usual. My acceptance that my time and energy is now limited comes with the knowledge that I won\u2019t be able to catch you all properly to give our relationships the time and appreciation they deserve. I get so many messages from you all, which often exceed the energy I have to reply. Where I am able to see people, I\u2019d just say keeping me company and being positive is helpful. I want fun, laughter, happiness, joy. I think it\u2019s very possible to have this kind of death \u2013 there is likely to be a shadow of sadness hanging over proceedings, but for the most part I want everyone relaxed and to be able to feel the love.",
-      "In many ways, you can\u2019t beat the liberation of being able to wake up when you feel like it, having few plans set in stone and being able to do whatever you want with the time you have.",
-      "First, the importance of gratitude. During my worst moments",
-      "Fifth, protect the planet"
-    ],
-    "favorite": 0,
     "source": "pocket"
   },
   "3094787764": {
@@ -632,30 +323,11 @@
     ],
     "link": "https://www.zainrizvi.io/blog/do-more-by-doing-less/",
     "tags": [
-      "productivity",
-      "programming",
+      "programming--tips",
       "psychology"
     ],
     "annotations": [
       "But the urge to add \u201cuseful\u201d features doesn\u2019t go away. There\u2019s even a name for it: scope creep.\n\n"
-    ],
-    "favorite": 0,
-    "source": "pocket"
-  },
-  "2980914038": {
-    "time_read": "2020-08-20",
-    "title": "The Confessions of Marcus Hutchins, the Hacker Who Saved the Internet",
-    "author": [
-      "Andy Greenberg"
-    ],
-    "link": "https://www.wired.com/story/confessions-marcus-hutchins-hacker-who-saved-the-internet/",
-    "tags": [
-      "hacking",
-      "real-life-stories"
-    ],
-    "annotations": [
-      "The FBI would never be so obvious, he told himself. ",
-      "When the worst of the danger was over, Neino was concerned enough for Hutchins' well-being that he tied part of his employee's bonus to forcing him to get some rest. When Hutchins finally went to bed, a week after WannaCry struck, he was paid more than $1,000 for every hour of sleep."
     ],
     "favorite": 0,
     "source": "pocket"
@@ -666,9 +338,8 @@
     "author": [],
     "link": "https://artem.krylysov.com/blog/2020/07/28/lets-build-a-full-text-search-engine/",
     "tags": [
-      "programming",
-      "tech",
-      "text-analysis"
+      "programming__dsa",
+      "programming__searchengine"
     ],
     "annotations": [
       "Because of the grammar rules, documents may include different forms of the same word. Stemming reduces words into their base form. For example, fishing, fished and fisher may be reduced to the base form (stem) fish.",
@@ -683,7 +354,6 @@
     "author": [],
     "link": "https://effectiviology.com/ennui/",
     "tags": [
-      "mental-health",
       "psychology"
     ],
     "annotations": [
@@ -708,34 +378,9 @@
     ],
     "link": "https://www.freecodecamp.org/news/alternative-career-paths/",
     "tags": [
-      "career",
-      "resource",
-      "tech"
+      "career"
     ],
     "annotations": [],
-    "favorite": 0,
-    "source": "pocket"
-  },
-  "2898342889": {
-    "time_read": "2020-08-15",
-    "title": "The Evolution of Our Product Management Process",
-    "author": [],
-    "link": "https://www.karllhughes.com/posts/product-management-process",
-    "tags": [
-      "business",
-      "career",
-      "leadership",
-      "management",
-      "product-management"
-    ],
-    "annotations": [
-      "Delivering a high quality product over time is what leads to growth (in most cases), so you can\u2019t really avoid consistency if you want your business to grow.",
-      "Most small businesses are dependent on the expertise of whoever is on payroll at a given time. As a consequence, how tasks are performed changes as people come and go\u2026Your franchise prototype should clearly document \u2018the way we do it here,\u2019 and the resulting proprietary operating systems will ensure that tasks are always performed consistently, regardless of who carries them out.",
-      "Documenting a role that doesn\u2019t exist and then following a strict process even when you don\u2019t need it will seem silly at first. Gerber uses the illustration of an expert baker who opens a bakery. The baker knows her recipes by heart, so she doesn\u2019t bother to write them down. Heck, she doesn\u2019t even need to measure the ingredients any more.\n\nThis is fine as long as she\u2019s the only one baking, but if she ever wants to take a vacation, a day off, or open a second location, she\u2019s going to have to get out of the kitchen. And getting out of the kitchen means documenting her process and handing it off to someone else.",
-      "Learn the job\nDesign a repeatable process\nFollow and refine the process\nHire someone else to follow the process",
-      "This was comforting because I often spend too much time trying to figure out the \u201cright\u201d way to do things, so knowing that there was no \u201cright way\u201d let me shortcut that desire.",
-      "Only Hire for a Role You Have Done Yourself\n"
-    ],
     "favorite": 0,
     "source": "pocket"
   },
@@ -747,9 +392,7 @@
     ],
     "link": "https://blog.trello.com/7-overlooked-biases-that-creep-into-your-work-and-undermine-its-success",
     "tags": [
-      "brain",
-      "psychology",
-      "science"
+      "psychology__bias"
     ],
     "annotations": [
       "Biases, more specifically cognitive biases, are your unchecked tendencies to make decisions or take actions in an irrational way.",
@@ -778,9 +421,8 @@
     ],
     "link": "https://www.theatlantic.com/family/archive/2020/07/why-success-wont-make-you-happy/614731/",
     "tags": [
-      "happy",
-      "life-tips",
-      "psychology"
+      "psychology",
+      "psychology__happy"
     ],
     "annotations": [
       "Success in and of itself is not a bad thing, any more than wine is a bad thing. Both can bring fun and sweetness to life. But both become tyrannical when they are a substitute for\u2014instead of a complement to\u2014the relationships and love that should be at the center of our lives",
@@ -799,81 +441,6 @@
     "favorite": 1,
     "source": "pocket"
   },
-  "3064928775": {
-    "time_read": "2020-08-11",
-    "title": "National Education Policy, 2020",
-    "author": [],
-    "link": "https://www.drishtiias.com/daily-updates/daily-news-analysis/national-education-policy-2020",
-    "tags": [
-      "education",
-      "india",
-      "policies"
-    ],
-    "annotations": [
-      "The NEP cleared by the Cabinet is only the third major revamp of the framework of education in India since independence.",
-      "It will bring the uncovered age group of 3-6 years under school curriculum, which has been recognized globally as the crucial stage for development of mental faculties of a child.",
-      "open schooling system",
-      "to test core competencies rather than memorised facts,",
-      "By 2030, the minimum degree qualification for teaching will be a 4-year integrated B.Ed. degree.",
-      "Vocational Education to start from Class 6 with Internships.\n",
-      "The current 10+2 system to be replaced by a new 5+3+3+4 curricular structure corresponding to ages 3-8, 8-11, 11-14, and 14-18 years respectively.",
-      "Academic Bank of Credits to be established to facilitate Transfer of Credits.",
-      "An autonomous body, the National Educational Technology Forum (NETF), will be created to provide a platform for the free exchange of ideas on the use of technology to enhance learning, assessment, planning, administration.",
-      "all students allowed to take the exam twice.",
-      "with multiple exit options",
-      " 100% Gross Enrolment Ratio (GER) in school education by 2030."
-    ],
-    "favorite": 0,
-    "source": "pocket"
-  },
-  "1049087601": {
-    "time_read": "2020-08-11",
-    "title": "Spark 101: What Is It, What It Does, and Why It Matters",
-    "author": [
-      "Carol McDonald"
-    ],
-    "link": "https://mapr.com/blog/spark-101-what-it-what-it-does-and-why-it-matters/",
-    "tags": [
-      "data-processing",
-      "spark",
-      "tech"
-    ],
-    "annotations": [
-      "The goal of the Spark project was to keep the benefits of MapReduce\u2019s scalable, distributed, fault-tolerant processing framework, while making it more efficient and easier to use.",
-      "Programming languages supported by Spark include: Java, Python, Scala, and R.",
-      "libraries for SQL, machine learning, graph computation, and stream processing",
-      "What Sets Spark Apart?",
-      "general-purpose distributed data processing engine"
-    ],
-    "favorite": 0,
-    "source": "pocket"
-  },
-  "2954719135": {
-    "time_read": "2020-08-10",
-    "title": "IT\u2019S TIME TO BUILD",
-    "author": [
-      "Marc Andreessen"
-    ],
-    "link": "https://a16z.com/2020/04/18/its-time-to-build/",
-    "tags": [
-      "coronavirus",
-      "leadership",
-      "politics",
-      "startup",
-      "u.s."
-    ],
-    "annotations": [
-      "Part of the problem is clearly foresight, a failure of imagination",
-      "You see it throughout Western life, and specifically throughout American life.",
-      "A government that collects money from all its citizens and businesses each year has never built a system to distribute money to us when it\u2019s needed most.",
-      " And that is a failure of action, and specifically our widespread inability to *build*.",
-      "I\u2019m with Nicholas Stern when he says that capitalism is how we take care of people we don\u2019t know \u2014 all of these fields are highly lucrative already and should be prime stomping grounds for capitalist investment, good both for the investor and the customers who are served",
-      "The problem is desire. We need to *want* these things. The problem is inertia",
-      "We know one-to-one tutoring can reliably increase education outcomes by two standard deviations (the Bloom two-sigma effect); we have the internet; why haven\u2019t we built systems to match every young learner with an older tutor to dramatically improve student success?"
-    ],
-    "favorite": 0,
-    "source": "pocket"
-  },
   "2210750098": {
     "time_read": "2020-08-10",
     "title": "A cartoon intro to DNS over HTTPS \u2013 Mozilla Hacks : the Web developer blog",
@@ -882,11 +449,8 @@
     ],
     "link": "https://hacks.mozilla.org/2018/05/a-cartoon-intro-to-dns-over-https",
     "tags": [
-      "browser",
-      "dns",
-      "security",
-      "tech",
-      "web"
+      "programming__networks",
+      "web__security"
     ],
     "annotations": [
       "Instead of doing this, Cloudflare will make the request from one of their own IP addresses near the user. This provides geolocation without tying it to a particular user.",
@@ -920,34 +484,13 @@
     "favorite": 1,
     "source": "pocket"
   },
-  "2981376024": {
-    "time_read": "2020-08-08",
-    "title": "What is Deno and will it Replace NodeJS?",
-    "author": [
-      "Fernando Doglio"
-    ],
-    "link": "https://blog.bitsrc.io/what-is-deno-and-will-it-replace-nodejs-a13aa1734a74",
-    "tags": [
-      "deno",
-      "programming",
-      "tech",
-      "web"
-    ],
-    "annotations": [],
-    "favorite": 0,
-    "source": "pocket"
-  },
   "2166351489": {
     "time_read": "2020-07-24",
     "title": "Solving the N+1 Problem for GraphQL through Batching",
     "author": [],
     "link": "https://engineering.shopify.com/blogs/engineering/solving-the-n-1-problem-for-graphql-through-batching",
     "tags": [
-      "database",
-      "dev-tips",
-      "performance",
-      "programming",
-      "web"
+      "programming__database"
     ],
     "annotations": [
       "Both over-fetching and under-fetching waste valuable computing power and bandwidth.",
@@ -962,28 +505,6 @@
     "favorite": 0,
     "source": "pocket"
   },
-  "3047398264": {
-    "time_read": "2020-07-24",
-    "title": "You've only added two lines - why did that take two days!",
-    "author": [],
-    "link": "https://www.mrlacey.com/2020/07/youve-only-added-two-lines-why-did-that.html",
-    "tags": [
-      "bugs",
-      "programming",
-      "tech",
-      "testing"
-    ],
-    "annotations": [
-      "I don't want the quickest possible fix. I want a fix that isn't likely to cause confusion or other problems in the future.",
-      "Because I took the time to investigate the real cause of the issue, not just looking at the symptoms. ",
-      "Because I investigated if there were other ways of getting to the same problem, not just the reported reproduction steps",
-      "Claiming there isn't enough is a great way to look like you're trying to help but not have to do anything.",
-      "No error, no problem. Right? Sorry, for me, making the problem invisible isn't the same as fixing it.",
-      " I don't want a bug to be found in the future and for me to have to come back to this code when I've mentally moved on. Context switching is expensive and frustrating"
-    ],
-    "favorite": 0,
-    "source": "pocket"
-  },
   "2020524010": {
     "time_read": "2020-07-20",
     "title": "How Operating Systems Work: 10 Concepts you Should Know as a Developer",
@@ -992,9 +513,7 @@
     ],
     "link": "https://codeburst.io/how-operating-systems-work-10-concepts-you-should-know-as-a-developer-8d63bb38331f",
     "tags": [
-      "operating-system",
-      "programming",
-      "tech"
+      "programming__os"
     ],
     "annotations": [
       "Major components of an OS are the file system, scheduler, and device driver.",
@@ -1034,11 +553,8 @@
     ],
     "link": "https://macwright.org/2020/05/10/spa-fatigue.html",
     "tags": [
-      "javascript",
-      "programming",
-      "react",
-      "tech",
-      "web"
+      "web__frontend",
+      "web__performance"
     ],
     "annotations": [
       "The user loads the page, which now has pre-rendered content, and then the JavaScript loads and makes the page interactive.",
@@ -1063,8 +579,6 @@
     ],
     "link": "https://www.bakadesuyo.com/2020/01/overcome-impostor-syndrome/",
     "tags": [
-      "life-tips",
-      "productivity",
       "psychology"
     ],
     "annotations": [
@@ -1087,34 +601,6 @@
     "favorite": 0,
     "source": "pocket"
   },
-  "3045691154": {
-    "time_read": "2020-07-14",
-    "title": "It\u2019s 2022. What Does Life Look Like?",
-    "author": [
-      "DAVID LEONHARDT"
-    ],
-    "link": "https://www.nytimes.com/2020/07/10/opinion/sunday/coronavirus-economy-two-years.html",
-    "tags": [
-      "business",
-      "coronavirus",
-      "finance",
-      "politics"
-    ],
-    "annotations": [
-      "If they do, they will create spillover victims \u2014 the hundreds of malls that rely on department stores for rent and foot traffic.",
-      "But the threshold for what requires travel, and the time, cost and fatigue it brings, will rise. ",
-      "His point is that companies with flawed business models can look healthy in good times. Out of habit, many customers continue to buy from them. But when the economy weakens, people have to make decisions about where to pull back. They often start with products and services that they find the least valuable or that they can replace with a cheaper alternative.",
-      "Even before the virus, Amazon turned two former malls near Cleveland into warehouses, a physical manifestation of changing shopping habits",
-      "\u201cIt\u2019s only when the tide goes out,\u201d Warren Buffett likes to say, \u201cthat you learn who\u2019s been swimming naked.\u201d",
-      "Of course, business failures can be healthy. They are part of the \u201ccreative destruction\u201d that the economist Joseph Schumpeter famously described, allowing more efficient and innovative rivals to rise",
-      "It could easily be the most important global experience since World War II and the Great Depression. ",
-      "In some cases, people will realize that they were sticking to old habits out of inertia and prefer their new habits.",
-      "If that happens, their cities will be left without perhaps the only major source of information about local politics, business, education and the like.",
-      "Many things will not change. That\u2019s one of history\u2019s lessons."
-    ],
-    "favorite": 0,
-    "source": "pocket"
-  },
   "2965367131": {
     "time_read": "2020-07-14",
     "title": "Things I Wished More Developers Knew About Databases",
@@ -1123,10 +609,7 @@
     ],
     "link": "https://medium.com/@rakyll/things-i-wished-more-developers-knew-about-databases-2d0178464f78",
     "tags": [
-      "database",
-      "dev-tips",
-      "programming",
-      "sql"
+      "programming__database"
     ],
     "annotations": [
       "As of today, MongoDB has journaling but dirty writes still can affect the durability of data because they are committing journals at every 100ms by default.",
@@ -1161,27 +644,6 @@
     "favorite": 1,
     "source": "pocket"
   },
-  "3045691464": {
-    "time_read": "2020-07-13",
-    "title": "How Rich Are the Rich? If Only You Knew",
-    "author": [
-      "Gil B. Manzon Jr."
-    ],
-    "link": "https://getpocket.com/explore/item/how-rich-are-the-rich-if-only-you-knew",
-    "tags": [
-      "finance",
-      "politics",
-      "u.s."
-    ],
-    "annotations": [
-      "More notably, inequality scholars Emmanuel Saez and Gabriel Zucman found that the top 0.01 percent controlled 22 percent of all wealth in 2012, up from just 7 percent in 1979.",
-      "Wealth, on the other hand, is an aggregation, affected not only by current income but earnings accumulated in previous years and by previous generations.",
-      "\u201cIf poor people knew how rich rich people are, there would be riots in the streets.\u201d\n\n",
-      "Most inequality studies have focused on income \u2013 measures of which are widely available. However, being rich is not about a single year of earnings but rather about the accumulation of wealth over time. In the past, quantifying that has been tricky."
-    ],
-    "favorite": 0,
-    "source": "pocket"
-  },
   "3045005819": {
     "time_read": "2020-07-13",
     "title": "A thread on managing time... I have had a wonderful relationship with time, for as long as I can remember. A lot of people graciously ask me\u2026",
@@ -1190,8 +652,7 @@
     ],
     "link": "https://threadreaderapp.com/thread/1281498178135756801.html",
     "tags": [
-      "productivity",
-      "time-management"
+      "time__management"
     ],
     "annotations": [
       "Physical energy: Quality of your sleep When and what do you eat Your fitness Emotional energy: Do you have self confidence? Do you talk positively to your own self? Mental energy: Are you creative Are you optimistic Spiritual energy: Do you have integrity, commitment? Honesty?"
@@ -1207,8 +668,7 @@
     ],
     "link": "https://getpocket.com/explore/item/the-secret-to-giving-a-compliment-that-makes-people-glow",
     "tags": [
-      "life-tips",
-      "social-skills"
+      "social-skills--tips"
     ],
     "annotations": [
       "The next time you\u2019re tempted to settle for a \u201cGood job,\u201d take a moment and either describe the effect that the job had on you (or other people) or name what was so special about what they did. Say something like, \u201cI really appreciated the extra time you spent with that customer \u2014 I could tell it made a huge difference to them.\u201d",
@@ -1219,180 +679,6 @@
     "favorite": 0,
     "source": "pocket"
   },
-  "3013297993": {
-    "time_read": "2020-07-13",
-    "title": "Microsoft: Rust Is the Industry\u2019s \u2018Best Chance\u2019 at Safe Systems Programming",
-    "author": [
-      "Joab Jackson"
-    ],
-    "link": "https://thenewstack.io/microsoft-rust-is-the-industrys-best-chance-at-safe-systems-programming/",
-    "tags": [
-      "programming",
-      "security"
-    ],
-    "annotations": [
-      "Back in 2004, each memory-related error cost industry about $250,000 each, and that Microsoft estimation is probably on the lower-end, Levick said.",
-      "Static analysis ",
-      "But the industry is being crippled by all the memory-related bugs \u2014 many of which are security hazards \u2014 caused by these languages.",
-      " runtime checks"
-    ],
-    "favorite": 0,
-    "source": "pocket"
-  },
-  "2628984132": {
-    "time_read": "2020-07-07",
-    "title": "What Really Happened to Malaysia\u2019s Missing Airplane",
-    "author": [
-      "William Langewiesche"
-    ],
-    "link": "https://www.theatlantic.com/magazine/archive/2019/07/mh370-malaysia-airlines/590653/",
-    "tags": [
-      "air-crash",
-      "investigation"
-    ],
-    "annotations": [],
-    "favorite": 0,
-    "source": "pocket"
-  },
-  "108565326": {
-    "time_read": "2020-07-04",
-    "title": "How Will You Measure Your Life?",
-    "author": [],
-    "link": "https://hbr.org/2010/07/how-will-you-measure-your-life",
-    "tags": [
-      "leadership",
-      "life",
-      "life-tips"
-    ],
-    "annotations": [
-      " If they think that they\u2019ll have more time and energy to reflect later, they\u2019re nuts,",
-      "And if your attitude is that only smarter people have something to teach you, your learning opportunities will be very limited.",
-      "I asked all the students to describe the most humble person they knew. One characteristic of these humble people stood out: They had a high level of self-esteem.",
-      "The lesson I learned from this is that it\u2019s easier to hold to your principles 100% of the time than it is to hold to them 98% of the time.",
-      "Clarity about their purpose will trump knowledge of activity-based costing, balanced scorecards, core competence, disruptive innovation, the four Ps, and the five forces.",
-      "But if you have a humble eagerness to learn something from everybody, your learning opportunities will be unlimited.",
-      "Justification for infidelity and dishonesty in all their manifestations lies in the marginal cost economics of \u201cjust this once.\u201d",
-      "But instead of telling him what to think, I taught him how to think\u2014and then he reached what I felt was the correct decision on his own.",
-      "Instead, I run the question aloud through one of my models. I\u2019ll describe how the process in the model worked its way through an industry quite different from their own. And then, more often than not, they\u2019ll say, \u201cOK, I get it.\u201d And they\u2019ll answer their own question more insightfully than I could have.",
-      "This is my final recommendation: Think about the metric by which your life will be judged, and make a resolution to live every day so that in the end, your life will be judged a success",
-      "First, how can I be sure that I\u2019ll be happy in my career? Second, how can I be sure that my relationships with my spouse and my family become an enduring source of happiness? Third, how can I be sure I\u2019ll stay out of jail?",
-      "Doing deals doesn\u2019t yield the deep rewards that come from building up people",
-      "If you want your kids to have strong self-esteem and confidence that they can solve hard problems, those qualities won\u2019t magically materialize in high school. You have to design them into your family\u2019s culture\u2014and you have to think about this very early on",
-      "who asserts that the powerful motivator in our lives isn\u2019t money; it\u2019s the opportunity to learn, grow in responsibilities, contribute to others, and be recognized for achievements. ",
-      "Because companies\u2019 decision-making systems are designed to steer investments to initiatives that offer the most tangible and immediate returns, companies shortchange investments in initiatives that are crucial to their long-term strategies."
-    ],
-    "favorite": 1,
-    "source": "pocket"
-  },
-  "3038233513": {
-    "time_read": "2020-07-04",
-    "title": "r/Libertarian - As a black man I feel Black Lives Matter are becoming bullies and are actually hurting the Black community by segregating us further create a racial divides.",
-    "author": [],
-    "link": "https://www.reddit.com/r/Libertarian/comments/haq8cw/as_a_black_man_i_feel_black_lives_matter_are/",
-    "tags": [
-      "ethics",
-      "politics"
-    ],
-    "annotations": [],
-    "favorite": 1,
-    "source": "pocket"
-  },
-  "3030378036": {
-    "time_read": "2020-06-28",
-    "title": "Risk of never fully recovering after coronavirus \u2018very real,\u2019 scientists say",
-    "author": [
-      "Julie Steenhuysen"
-    ],
-    "link": "https://globalnews.ca/news/7111094/coronavirus-scientists-health-problems/",
-    "tags": [
-      "coronavirus",
-      "health"
-    ],
-    "annotations": [
-      "In addition to respiratory distress, patients with COVID-19 can experience blood clotting disorders that can lead to strokes, and extreme inflammation that attacks multiple organ systems. The virus can also cause neurological complications that range from headache, dizziness and loss of taste or smell to seizures and confusion."
-    ],
-    "favorite": 0,
-    "source": "pocket"
-  },
-  "3026916291": {
-    "time_read": "2020-06-28",
-    "title": "The Second Great Depression",
-    "author": [
-      "Annie Lowrey"
-    ],
-    "link": "https://www.theatlantic.com/ideas/archive/2020/06/second-great-depression/613360/",
-    "tags": [
-      "coronavirus",
-      "finance"
-    ],
-    "annotations": [
-      "the Congressional Budget Office anticipates that the American economy will generate $8 trillion less in economic activity over the next decade than it projected just a few months ago, and that a full recovery might not take hold until the 2030s.",
-      "Like many of its peer nations, the United States imposed shelter-in-place and social-distancing measures to curtail the spread of the virus. But it did so late,",
-      "But the PPP was scaled to help businesses through a short, intense disruption, though the economy is expected to remain sluggish for months and months",
-      "And the ugly: The big helicopter drop was a onetime thing, and the unemployment-insurance expansion was time-limited. ",
-      "The country will rebound, as things reopen. The bounce will seem remarkable, given how big the drop was: Retail sales rose 18 percent in May, and the economy added 2.5 million jobs",
-      " The CBO forecasts that every quarter through the end of 2021, American consumers will buy $300 billion to $370 billion less than they would have if the pandemic had never happened.",
-      "At least four major factors are terrifying economists and weighing on the recovery: the household fiscal cliff, the great business die-off, the state and local budget shortfall, and the lingering health crisis. ",
-      "The botched response means millions of parents will need to continue watching their young children instead of committing to work. ",
-      "Nearly 40 percent of low-wage workers lost their jobs in March. More than 40 million people lost their jobs in March, April, or May.",
-      "The United States merely patted it down. The country is reopening with the disease still spreading and maiming and killing, as several states experience a dramatic surge in caseloads.",
-      "The Trump administration, in its hubris, obstinacy, and incompetence, failed to do it."
-    ],
-    "favorite": 0,
-    "source": "pocket"
-  },
-  "3028945087": {
-    "time_read": "2020-06-26",
-    "title": "A THREAD on insightful timeless ideas shared by @naval during 201 : 3 : 1/ To everyone saying that college is about connections and soft stuf\u2026",
-    "author": [
-      "Rohit Jindal"
-    ],
-    "link": "https://threadreaderapp.com/thread/1275973545995063297.html",
-    "tags": [
-      "life",
-      "life-tips",
-      "productivity"
-    ],
-    "annotations": [
-      "In a negotiation, whoever cares less, wins.",
-      "The measure of how much you love something is what you sacrifice for it.",
-      "Highly recommend that every would-be investor start a company first.\nIt's hard to understand pain in the abstract.",
-      "With truly logical people, most arguments are very short and based mainly on differing assumptions.",
-      "\"Clear Thinker\" is a better compliment than \"Smart.\"",
-      "Intentions don't matter. Actions do. That's why being ethical is hard.",
-      "If you can't decide, the answer is No.",
-      "The classical virtues are all decision-making heuristics to make one optimize for the long term rather than for the short term."
-    ],
-    "favorite": 0,
-    "source": "pocket"
-  },
-  "3025806739": {
-    "time_read": "2020-06-26",
-    "title": "Are Universities Going the Way of CDs and Cable TV?",
-    "author": [
-      "Michael D. Smith"
-    ],
-    "link": "https://www.theatlantic.com/ideas/archive/2020/06/university-like-cd-streaming-age/613291/",
-    "tags": [
-      "coronavirus",
-      "education",
-      "future",
-      "millennials"
-    ],
-    "annotations": [
-      "What is the core mission of higher education? That\u2019s the question we need to ask right now. In my view, the answer is simple: As educators, we strive to create opportunities for as many students as possible to discover and develop their talents, and to use those talents to make a difference in the world.",
-      "Why terrifying? Because I study how new technologies cause power shifts in industries, and I fear that the changes in store for higher education are going to look a lot like the painful changes we\u2019ve seen in retail, travel, news, and entertainment.",
-      " \u201cWould you pay $75,000 for front-row seats to a Beyonc\u00e9 concert and be satisfied with a livestream instead?\u201d",
-      "What online services lack in quality, they make up for in convenience\u2014and as they get more popular, they\u2019re only going to get better, which in turn could unbundle the prevailing model of higher education.",
-      "We all know how that worked out: From 1999 to 2009, the music industry lost 50 percent of its sales. From 2014 to 2019, roughly 16 million American households canceled their cable subscriptions.",
-      "Information technology transforms industries by making scarce resources plentiful, forcing customers to rethink the value of established products.",
-      "It is also likely to impact master\u2019s programs before bachelor\u2019s programs, because many working professionals seeking to shift careers don\u2019t have the time or resources for full-time, residential programs.",
-      "In the entertainment industry, major studios, publishers, and music labels maintained their power by controlling the scarce equipment and studio space necessary to create content, the scarce channels necessary to distribute content, and by using copyright law to create an artificial scarcity in how consumers gained access to content.",
-      "But remember, just because new technology changed the way entertainment was delivered doesn\u2019t mean it impeded the industry\u2019s underlying mission. Instead of destroying TV, movies, and books, new technologies have produced an explosion in creative output, delivered through the convenience, personalization, and interactivity of Kindle libraries, Netflix recommendations, and Spotify playlists."
-    ],
-    "favorite": 1,
-    "source": "pocket"
-  },
   "1960937976": {
     "time_read": "2020-06-21",
     "title": "The Cost Of JavaScript",
@@ -1401,11 +687,8 @@
     ],
     "link": "https://medium.com/dev-channel/the-cost-of-javascript-84009f51e99e",
     "tags": [
-      "javascript",
-      "performance",
-      "programming",
-      "tech",
-      "web"
+      "programming__javascript",
+      "web__performance"
     ],
     "annotations": [
       "Minifying it",
@@ -1425,57 +708,6 @@
     "favorite": 1,
     "source": "pocket"
   },
-  "3014390591": {
-    "time_read": "2020-06-21",
-    "title": "The Millennial Mental-Health Crisis",
-    "author": [
-      "Olga Khazan"
-    ],
-    "link": "https://www.theatlantic.com/health/archive/2020/06/why-suicide-rates-among-millennials-are-rising/612943/",
-    "tags": [
-      "coronavirus",
-      "health",
-      "mental-health",
-      "millennials",
-      "psychology"
-    ],
-    "annotations": [
-      " \u201cJobs are a source of meaning in our lives,\u201d says Cheryl Fulton, a professor in the counseling program at Texas State University. \u201cSo if you don't have a job or are underemployed, you\u2019re not deriving that satisfaction that comes from the meaning and purpose a job provides.\u201d",
-      "The difference between what we have and what others have can prompt the bone-deep shame that leads to suicidal ideation, says Jonathan Singer, an associate professor of social work at Loyola University Chicago and the president of the American Association of Suicidology. ",
-      "That can cause shame, and shame is \u201cone of the bigger drivers of suicide.\u201d",
-      "Millennials are \u201cthe bad-luck cohort.\u201d",
-      "Many Millennials who had their careers crippled by the 2008 recession are being flung into yet another economic downturn, just as they\u2019re supposed to be hitting their career peak. ",
-      "Yet Millennials are the first generation to have come of age with Facebook and Twitter\u2014compelled to compare themselves with others but not jaded enough to know how empty these comparisons can be",
-      "People see that others are depressed and lonely, making defeat feel more like a temporary problem than a permanent condition. The pandemic is a shared burden, not an individual one.",
-      "What does suicidal ideation look like? Some researchers theorize that it\u2019s a feeling of defeat and humiliation followed by a sense of entrapment\u2014of no exit",
-      "Older Millennials snapped into adulthood after 9/11, fought in two wars, entered the job market during a recession, and are now weathering a global pandemic in overpriced one-bedroom apartments. They\u2019ve experienced slower economic growth than any other generation in U.S. history, according to a Washington Post analysis. And having been clobbered by the last recession, they\u2019re about to get clobbered again.",
-      "Therapists who treat Millennials told me that many of their clients feel frustrated and embarrassed that they aren\u2019t able to afford \u201cadult things\u201d such as houses and vacations, either because they don\u2019t earn enough or because they are handcuffed to enormous student loans. "
-    ],
-    "favorite": 0,
-    "source": "pocket"
-  },
-  "2958912826": {
-    "time_read": "2020-06-11",
-    "title": "Bluetooth contact tracing needs bigger, better data",
-    "author": [
-      "Patrick Howell O'Neill"
-    ],
-    "link": "https://www.technologyreview.com/2020/04/22/1000353/bluetooth-contact-tracing-needs-bigger-better-data/",
-    "tags": [
-      "bluetooth",
-      "coronavirus",
-      "tech"
-    ],
-    "annotations": [
-      "As part of its normal operation, it can measure the strength of a signal from another phone (known as the RSSI, or received signal strength indicator)",
-      "if your phone is standing up in your pocket\u2014in portrait rather than landscape mode\u2014it can significantly change the amount of received power",
-      "the amount of power is proportional to distance, so it can be used to gauge how far the two phones are from one another.",
-      "In reality, many things can mess that signal up and make the data incorrect. Things like walls, human bodies, pockets, or even proximity to several phones at once can throw the measurements off.",
-      "low-power signal that\u2019s present in most phones, is highly resistant to blockage, and can be used in a way that preserves privacy."
-    ],
-    "favorite": 0,
-    "source": "pocket"
-  },
   "2993633582": {
     "time_read": "2020-06-11",
     "title": "The IKEA effect",
@@ -1484,9 +716,7 @@
     ],
     "link": "https://stitcher.io/blog/the-ikea-effect",
     "tags": [
-      "career-advice",
-      "dev-tips",
-      "life-tips"
+      "psychology"
     ],
     "annotations": [
       "Wrap it up",
@@ -1509,34 +739,12 @@
     "author": [],
     "link": "https://thesephist.com/posts/pl/",
     "tags": [
-      "compilers",
-      "programming"
+      "programming__compilers"
     ],
     "annotations": [
       " But designing the semantics of the language is where you should spend the most of your time, because it\u2019s where the language gets its \u201cfeel\u201d and where you\u2019ll learn the most",
       "So you may trade off the ease of parsing with execution complexity",
       "Do you treat errors like exceptions that bubble up through the call stack, or are errors treated like values, as in C and Go?"
-    ],
-    "favorite": 0,
-    "source": "pocket"
-  },
-  "2993377125": {
-    "time_read": "2020-05-23",
-    "title": "Want to Be More Productive? Try Doing Less.",
-    "author": [],
-    "link": "https://hbr.org/2020/05/want-to-be-more-productive-try-doing-less",
-    "tags": [
-      "leadership",
-      "life-tips",
-      "productivity"
-    ],
-    "annotations": [
-      "Often the things we think we \u201cmust\u201d do are simply because we always have done them or others around us do them and we think we should, too",
-      "Be ruthless",
-      "We need to identify what not to do",
-      "when your preteen bared their soul to you and you felt so honored by how safe they felt to tell you the hard stuff.",
-      " We have not been culturally conditioned to celebrate ourselves, so often, folks will draw a blank when listing their \u201cwins.\u201d ",
-      " When you stop doing the things that make you feel busy but aren\u2019t getting you results (and are draining you of energy), then you end up with more than enough time for what matters "
     ],
     "favorite": 0,
     "source": "pocket"
@@ -1547,11 +755,7 @@
     "author": [],
     "link": "https://www.smashingmagazine.com/2016/03/houdini-maybe-the-most-exciting-development-in-css-youve-never-heard-of/",
     "tags": [
-      "css",
-      "future",
-      "programming",
-      "ux",
-      "web"
+      "web__frontend"
     ],
     "annotations": [
       "Many of the specifications listed above show code samples (for example, registerLayout and registerPaint). If you\u2019re wondering where you\u2019d put that code, the answer is in worklet scripts.",
@@ -1578,10 +782,7 @@
     ],
     "link": "https://www.reddit.com/r/socialskills/comments/czah6t/today_i_turn_33_here_are_33_lessons_ive_learned/",
     "tags": [
-      "ifttt",
-      "life-tips",
-      "reddit",
-      "social-skills"
+      "social-skills--tips"
     ],
     "annotations": [],
     "favorite": 1,
@@ -1593,11 +794,7 @@
     "author": [],
     "link": "https://www.reddit.com/r/Stoicism/comments/gc2u2m/heres_a_list_of_some_of_the_things_i_have_taken/",
     "tags": [
-      "ifttt",
-      "life-tips",
-      "psychology",
-      "reddit",
-      "stoicism"
+      "psychology__stoic"
     ],
     "annotations": [
       "There is no perfection.",
@@ -1613,42 +810,6 @@
     "favorite": 0,
     "source": "pocket"
   },
-  "2974780270": {
-    "time_read": "2020-05-10",
-    "title": "Aarogya Setu: The story of a failure",
-    "author": [
-      "Elliot Alderson"
-    ],
-    "link": "https://medium.com/@fs0c131y/aarogya-setu-the-story-of-a-failure-3a190a18e34",
-    "tags": [
-      "android",
-      "coronavirus",
-      "hacking",
-      "medium",
-      "programming"
-    ],
-    "annotations": [],
-    "favorite": 0,
-    "source": "pocket"
-  },
-  "2933994660": {
-    "time_read": "2020-04-04",
-    "title": "Prime Minister Modi, they don't like you",
-    "author": [
-      "Sarang"
-    ],
-    "link": "https://www.rediff.com/news/column/coronavirus-in-india-prime-minister-modi-they-dont-like-you/20200331.htm",
-    "tags": [
-      "coronavirus",
-      "india",
-      "politics"
-    ],
-    "annotations": [
-      "I can see this is a fight where winning is not the goal, minimising losses is. Suffering and collateral damage are inevitable, and survival is the key."
-    ],
-    "favorite": 0,
-    "source": "pocket"
-  },
   "1250051416": {
     "time_read": "2020-03-21",
     "title": "Classification And Regression Trees for Machine Learning",
@@ -1657,8 +818,7 @@
     ],
     "link": "http://machinelearningmastery.com/classification-and-regression-trees-for-machine-learning/",
     "tags": [
-      "machine-learning",
-      "programming"
+      "programming__ml"
     ],
     "annotations": [
       "You can use\u00a0pruning after learning your tree to further lift performance.",
@@ -1684,9 +844,7 @@
     ],
     "link": "https://developers.google.com/web/updates/2018/09/inside-browser-part4",
     "tags": [
-      "browser",
-      "chrome",
-      "web"
+      "web__browser"
     ],
     "annotations": [
       "In order to mitigate this from happening, you can pass passive: true options in your event listener. This hints to the browser that you still want to listen to the event in the main thread, but compositor can go ahead and composite new frame as well.",
@@ -1710,9 +868,6 @@
     ],
     "link": "https://waitbutwhy.com/2013/10/why-procrastinators-procrastinate.html",
     "tags": [
-      "life-tips",
-      "procrastination",
-      "productivity",
       "psychology"
     ],
     "annotations": [
@@ -1723,22 +878,6 @@
     "favorite": 1,
     "source": "pocket"
   },
-  "2867008964": {
-    "time_read": "2020-03-17",
-    "title": "26 frameworks for your life",
-    "author": [
-      "Giving People Assignments"
-    ],
-    "link": "https://manassaloi.com/2020/01/26/personal-life-frameworks.html",
-    "tags": [
-      "frameworks",
-      "life-tips",
-      "resource"
-    ],
-    "annotations": [],
-    "favorite": 0,
-    "source": "pocket"
-  },
   "2859806265": {
     "time_read": "2020-03-17",
     "title": "Why Performance Matters",
@@ -1747,8 +886,7 @@
     ],
     "link": "https://developers.google.com/web/fundamentals/performance/why-performance-matters?hl=th",
     "tags": [
-      "performance",
-      "web"
+      "web__performance"
     ],
     "annotations": [
       "An effective method of building high performance applications is to audit what resources you send to users. ",
@@ -1773,8 +911,7 @@
     ],
     "link": "https://markmanson.net/the-meaning-of-life",
     "tags": [
-      "life",
-      "life-tips"
+      "life--tips"
     ],
     "annotations": [
       "Goals are good tools for building motivation. The problem is that, by themselves, they are arbitrary and empty.\n\nUnless there\u2019s a why behind the goal full of meaning, the goal itself will provide little long-term happiness or satisfaction.",
@@ -1802,9 +939,7 @@
     ],
     "link": "https://markmanson.net/life-cheat-codes",
     "tags": [
-      "gaming",
-      "life",
-      "life-tips"
+      "life--tips"
     ],
     "annotations": [
       "Therapy also works in this regard. You go sit on a couch and say a bunch of things to this person who sits there and pretends to care. Then that person says your thoughts back to you, just in a different way. And then you\u2019re like, \u201cOh wait, that sounds completely irrational. Thanks, Doc.\u201d And then you get screwed over because your health insurance doesn\u2019t cover it.",
@@ -1838,9 +973,7 @@
     ],
     "link": "https://medium.freecodecamp.org/a-quick-introduction-to-web-security-f90beaf4dd41",
     "tags": [
-      "dev-tips",
-      "security",
-      "tech"
+      "web__security"
     ],
     "annotations": [
       "At its core, HTTPS is fairly straightforward. HTTPS is encrypted and HTTP is not.",
@@ -1853,41 +986,6 @@
     "favorite": 0,
     "source": "pocket"
   },
-  "1791867536": {
-    "time_read": "2020-03-17",
-    "title": "How I Got My Attention Back",
-    "author": [
-      "Craig Mod"
-    ],
-    "link": "https://www.wired.com/2017/01/how-i-got-my-attention-back/",
-    "tags": [
-      "mental-health",
-      "productivity",
-      "psychology",
-      "tech"
-    ],
-    "annotations": [
-      "We were reasonably autonomous things. Now we\u2019re indifferently synchronous, easily manipulated.",
-      "And yet, the quietude of those disconnected days evaporated as soon as I came back online. It was a shock to feel my mind returning so quickly to where it was before \u2014 namely, away. Elsewhere. My attention so eager to latch onto whatever cleverly architected spaceship of dopamine was flying out from my consciousness.",
-      "In \u201cGravity and Grace,\u201d Simone Weil writes, \u201cAttention, taken to its highest degree, is the same thing as prayer. It presupposes faith and love.\u201d Then is the lack of attention the opposite? Does it presuppose fear and hate?",
-      "There are a thousand beautiful ways to start the day that don\u2019t begin with looking at your phone. And yet so few of us choose to do so.",
-      "It was none of these things. It was all of these things. Whatever it was, it robbed us of our attention and, with that, our compassion",
-      "When the scale of our systems with which we interact breaches our comprehension, and control of attention is weakened en masse, the opportunity for manipulation arises. ",
-      "Attention is a muscle. It must be exercised. Though, attention is duplicitous \u2014 it doesn\u2019t feel like a muscle. And exercising it doesn\u2019t result in an appreciably healthier looking body. But it does result in a sense of grounding, feeling rational, control of your emotions \u2014 a healthy mind. Our measuring sticks for life tend to be optimized for material things, things easy to count. Houses, cars, husbands, babies, dollar bills. Attention is immaterial, difficult to track.",
-      "I pulled the plug. Deleted the app. Deleted the Game Center account. The data was gone (I hoped, I haven\u2019t checked). A weight was temporarily lifted",
-      " I set a goal\u2014some level, some league that seemed just on the edge of \u201cenough.\u201d Make it over that line and I\u2019d pull the plug. ",
-      "It was so perfectly tuned to my most primitive set of chemical desires that it was actually beautiful \u2014 a thing of beauty",
-      "How technologies inevitably amplify ourselves \u2014 the best and worst parts",
-      "Total disconnection is not only unsustainable for most people, but can also be an unnecessary act of self-sabotage.",
-      "All of humanity\u2019s problems stem from man\u2019s inability to sit quietly in a room alone,\u201d wrote Blaise Pascal",
-      "While some blame our collective tech addiction on personal failings, like weak willpower, Harris points a finger at the software itself. That itch to glance at our phone is a natural reaction to apps and websites engineered to get us scrolling as frequently as possible. The attention economy, which showers profits on companies that seize our focus, has kicked off what Harris calls a \u201crace to the bottom of the brain stem.\u201d \u201cYou could say that it\u2019s my responsibility\u201d to exert self-control when it comes to digital usage, he explains, \u201cbut that\u2019s not acknowledging that there\u2019s a thousand people on the other side of the screen whose job is to break down whatever responsibility I can maintain.\u201d In short, we\u2019ve lost control of our relationship with technology because technology has become better at controlling us.",
-      "Take the morning. Hell, just take the first hour of the morning. Make a plan. Own your attention. A lack of ownership of attention can only make you a weaker leader. Can only make you a less potent and thoughtful member of your community.",
-      " I sensed they knew I had a goal, and they turned that goal into an unobtainable carrot",
-      "\u201cWe believe that we live in the \u2018age of information.\u2019\u201d he writes. \u201cThat there has been an information \u2018explosion,\u2019 an information \u2018revolution.\u2019 While in a certain narrow sense this is the case, in many important ways just the opposite is true. We also live at a moment of deep ignorance, when vital knowledge that humans have always possessed about who we are and where we live seems beyond our reach. An Unenlightenment. An age of missing information.\u201d"
-    ],
-    "favorite": 0,
-    "source": "pocket"
-  },
   "1162655354": {
     "time_read": "2020-03-16",
     "title": "The End of Small Talk",
@@ -1896,7 +994,6 @@
     ],
     "link": "https://www.nytimes.com/2016/01/17/fashion/dating-the-end-of-small-talk.html",
     "tags": [
-      "life-tips",
       "social-skills"
     ],
     "annotations": [
@@ -1913,123 +1010,6 @@
     "favorite": 0,
     "source": "pocket"
   },
-  "612572188": {
-    "time_read": "2020-03-15",
-    "title": "Your Life in Weeks",
-    "author": [
-      "Tim Urban"
-    ],
-    "link": "https://waitbutwhy.com/2014/05/life-weeks.html",
-    "tags": [
-      "life-tips",
-      "productivity"
-    ],
-    "annotations": [
-      "Building something to make your future diamonds or the diamonds of others more enjoyable",
-      "Enjoying the diamond",
-      "it\u2019s often a really bad Neither Week that leads you to a life-changing epiphany\u2014but trying to minimize your Neither Weeks is a worthy goal.",
-      "this grid of empty boxes staring me in the face is mine.",
-      " And when a long string of Neither Weeks happens, you become depressed, frustrated, hopeless, and a bunch of other upsetting adjectives."
-    ],
-    "favorite": 0,
-    "source": "pocket"
-  },
-  "1676706674": {
-    "time_read": "2020-03-15",
-    "title": "The 1 Percent Rule: Why a Few People Get Most of the Rewards",
-    "author": [
-      "James Clear"
-    ],
-    "link": "https://jamesclear.com/the-1-percent-rule",
-    "tags": [
-      "life-tips",
-      "productivity",
-      "psychology"
-    ],
-    "annotations": [
-      "The 1 Percent Rule states that over time the majority of the rewards in a given field will accumulate to the people, teams, and organizations that maintain a 1 percent advantage over the alternatives. ",
-      "Pareto noticed that a tiny number of pea pods in his garden produced the majority of the peas.",
-      "One plant only needs a slight edge in the beginning to crowd out the competition and take over the entire forest.",
-      "Situations in which small differences in performance lead to outsized rewards are known as Winner-Take-All Effects",
-      "Soon, you begin to understand why a few books sell millions of copies while the majority struggle to sell a few thousand copies.",
-      "From this advantageous position, the winning plant has a better ability to spread seeds and reproduce, which gives the species an even bigger footprint in the next generation. This process gets repeated again and again until the plants that are slightly better than the competition dominate the entire forest.",
-      "Small differences in performance can lead to very unequal distributions when repeated over time. ",
-      "accumulative advantage.",
-      "The Matthew Effect, which references a passage in The Bible that says, \u201cFor all those who have, more will be given, and they will have an abundance; but from those who have nothing, even what they have will be taken away.\u201d",
-      "The majority of rewards always seemed to accrue to a small percentage of people.",
-      " Just 1.4 percent of tree species account for 50 percent of the trees in the Amazon"
-    ],
-    "favorite": 0,
-    "source": "pocket"
-  },
-  "2212484251": {
-    "time_read": "2020-03-15",
-    "title": "What is depression and why is it rising?",
-    "author": [
-      "Juliette Jowit"
-    ],
-    "link": "https://www.theguardian.com/news/2018/jun/04/what-is-depression-and-why-is-it-rising",
-    "tags": [
-      "mental-health",
-      "psychology",
-      "science"
-    ],
-    "annotations": [
-      "At any one time it is estimated that more than 300 million people have depression \u2013 about 4% of the world\u2019s population when the figures were published by the World Health Organization (WHO) in 2015. Women are more likely to be depressed than men.",
-      "The most common talking therapy is cognitive behavioural therapy, which breaks down overwhelming problems into situations, thoughts, emotions, physical feelings and actions to try to break a cycle of negative thoughts.",
-      "The logic is that if you are staring down the barrel of a gun or you don\u2019t know where the next meal is coming from, you have no time for such introspection.",
-      "Also, people in these countries are more likely to feel a social stigma against talking about how they feel, and are reluctant to ask for professional help",
-      "The limbic system is a circuit of nerves, transmitting signals to each other via two chemicals, serotonin and noradrenalin, of which people with depression have a deficit",
-      "Many more will be getting inadequate help, often focused on medication, with too little investment in talking therapies, which are regarded as a crucial ally.",
-      "However, there is no scientific evidence to support this theory, as it is impossible to experiment on live brains.",
-      "Symptoms include eating or sleeping too much or too little; pulling away from people and usual activities; having low or no energy; feeling numb or like nothing matters; feeling unusually confused, forgetful, on edge, angry, upset, worried or scared; and thinking of harming yourself or others.",
-      "Among pharmacological treatments for depression, the most commonly prescribed antidepressants are selective serotonin re-uptake inhibitors (SSRIs) which reduce the absorption of serotonin, increasing overall levels.",
-      " UK campaign group Mind: \u201cIt starts as sadness, then I feel myself shutting down, becoming less capable of coping. Eventually, I just feel numb and empty.\u201d",
-      "According to this description, depressive illness is predominantly a physical, not mental, illness.",
-      "particularly the persistent trope that people with depression should just \u201cbuck up\u201d, or \u201cget out more\u201d.",
-      "Countries are increasingly recognising the need to train more psychologists to replace or complement drug treatments",
-      "US government website, defines it as \u201closing interest in important parts of life\u201d. "
-    ],
-    "favorite": 0,
-    "source": "pocket"
-  },
-  "2836109174": {
-    "time_read": "2020-03-15",
-    "title": "I asked my students to turn in their cell phones and write about living without them",
-    "author": [
-      "Ron Srigley"
-    ],
-    "link": "https://www.technologyreview.com/s/614934/teenagers-without-cell-phones/",
-    "tags": [
-      "millennials",
-      "psychology",
-      "tech"
-    ],
-    "annotations": [
-      ". But after just two weeks, the majority began to think that their cell phones were in fact limiting their relationships with other people, compromising their own lives, and somehow cutting them off from the \u201creal\u201d world.",
-      "imply walking by strangers \u201cin the hallway or when I passed them on the street\u201d caused almost all of them to take out a phone \u201cright before I could gain eye contact with them.\u201d",
-      "The usual industry and education narrative about cell phones, social media, and digital technology generally is that they build community, foster communication, and increase efficiency, thus improving our lives.",
-      "Without their phones, most of my students initially felt lost, disoriented, frustrated, and even frightened. "
-    ],
-    "favorite": 0,
-    "source": "pocket"
-  },
-  "1236308843": {
-    "time_read": "2020-03-15",
-    "title": "Seven Zen Stories That Could Open Your Mind",
-    "author": [
-      "Melanie Pinola"
-    ],
-    "link": "https://lifehacker.com/seven-zen-stories-that-could-open-your-mind-1767039967",
-    "tags": [
-      "mindfulness"
-    ],
-    "annotations": [
-      "\u201cIf nothing exists,\u201d inquired Dokuon, \u201cwhere did this anger come from?\u201d"
-    ],
-    "favorite": 1,
-    "source": "pocket"
-  },
   "1492117435": {
     "time_read": "2020-03-15",
     "title": "This Is Your Life in Social Media",
@@ -2038,76 +1018,10 @@
     ],
     "link": "https://thebolditalic.com/this-is-your-life-in-social-media-1b3f0c726532",
     "tags": [
-      "satire",
       "social-media"
     ],
     "annotations": [],
     "favorite": 1,
-    "source": "pocket"
-  },
-  "2915550277": {
-    "time_read": "2020-03-15",
-    "title": "One man lost his life savings in a SIM hack. Here's how you can try to protect yourself",
-    "author": [
-      "Donie O'Sullivan",
-      "Samantha Guff"
-    ],
-    "link": "https://www.cnn.com/2020/03/13/tech/sim-hack-million-dollars/index.html",
-    "tags": [
-      "hacking",
-      "security",
-      "tech"
-    ],
-    "annotations": [
-      "SIM hack, an attack that occurs when hackers take over a victim's phone number by transferring it to a SIM card they control.",
-      " in this case AT&T. (WarnerMedia, the parent company of CNN, is owned by AT&T.) Pretending to be Ross, the alleged hacker successfully convinced AT&T that he was Ross and took control of Ross' phone number, an investigation by authorities in California later found. That's when Ross' own phone went dark."
-    ],
-    "favorite": 0,
-    "source": "pocket"
-  },
-  "2585056617": {
-    "time_read": "2020-03-15",
-    "title": "SameSite cookies explained",
-    "author": [
-      "Rowan Merewood"
-    ],
-    "link": "https://web.dev/samesite-cookies-explained/",
-    "tags": [
-      "browser",
-      "programming",
-      "tech",
-      "web"
-    ],
-    "annotations": [
-      " Cross-site request forgery (CSRF) attacks rely on the fact that cookies are attached to any request to a given origin, no matter who initiates the request.",
-      "When your reader views a page that meets those requirements, i.e. they're on a secure connection and the cookie is less than a month old, then their browser will send this header in its request",
-      "This is good when you have cookies relating to functionality that will always be behind an initial navigation, such as changing a password or making a purchase, but is too restrictive for promo_shown.",
-      " For example, if you embed a YouTube video on your site then visitors will see a \"Watch later\" option in the player. If your visitor is already signed in to YouTube, that session is being made available in the embedded player by a third-party cookie\u2014meaning that \"Watch later\" button will just save the video in one go rather than prompting them to sign in or having to navigate them away from your page and back over to YouTube.",
-      "Reading document.cookie will output all the cookies accessible in the current context, with each cookie separated by a semicolon:",
-      "Make use of the Max-Age attribute to help ensure that cookies don't hang around longer than needed.",
-      "Your promo_shown cookie should only be sent in a first-party context, whereas a session cookie for a widget meant to be embedded on other sites is intentionally there for providing the signed-in state in a third-party context",
-      " Cookies that match the domain of the current site, i.e. what's displayed in the browser's address bar, are referred to as first-party cookies. Similarly, cookies from domains other than the current site are referred to as third-party cookies.",
-      "When the reader is on the other person's blog the cookie will not be sent when the browser requests amazing-cat.png. However when the reader follows the link through to cat.html on your blog, that request will include the cookie. This makes Lax a good choice for cookies affecting the display of the site with Strict being useful for cookies related to actions your user is taking.",
-      " Servers set cookies by sending the aptly-named Set-Cookie header in their response. ",
-      " In most cases, those cookies are sent on every single request to that domain, which has a number of implications. Upload bandwidth is often more restricted than download for your users, so that overhead on all outbound requests is adding a delay on your time to first byte."
-    ],
-    "favorite": 0,
-    "source": "pocket"
-  },
-  "2878377967": {
-    "time_read": "2020-03-15",
-    "title": "Why anything less than a Best Picture Oscar for \u2018Parasite\u2019 is not enough",
-    "author": [
-      "Joe Berkowitz"
-    ],
-    "link": "https://www.fastcompany.com/90461436/why-anything-less-than-a-best-picture-oscar-for-parasite-is-not-enough",
-    "tags": [
-      "movies"
-    ],
-    "annotations": [
-      "This world runs on a system that only works if everyone is lying to each other, and to themselves."
-    ],
-    "favorite": 0,
     "source": "pocket"
   },
   "2879488009": {
@@ -2118,37 +1032,9 @@
     ],
     "link": "https://textslashplain.com/2020/02/09/demystifying-browsers/",
     "tags": [
-      "browser",
-      "resource",
-      "tech",
-      "web"
+      "web__browser--resource"
     ],
     "annotations": [],
-    "favorite": 0,
-    "source": "pocket"
-  },
-  "759180153": {
-    "time_read": "2020-03-15",
-    "title": "Martha Graham on the Hidden Danger of Comparing Yourself to Others",
-    "author": [
-      "James Clear"
-    ],
-    "link": "https://jamesclear.com/quality-comparison",
-    "tags": [
-      "life-tips",
-      "motivation",
-      "productivity",
-      "psychology"
-    ],
-    "annotations": [
-      "But the success of Oklahoma! confused her. She thought that her work on Oklahoma! was only average compared to some of her other creations. ",
-      "Martha Graham's advice takes this concept a step further by explaining that not only are you a bad judge of your own work, it is not your job to judge your own work",
-      "There is a vitality, a life force, an energy, a quickening that is translated through you into action, and because there is only one of you in all of time, this expression is unique. And if you block it, it will never exist through any other medium and it will be lost. The world will not have it. It is not your business to determine how good it is nor how valuable nor how it compares with other expressions. It is your business to keep it yours clearly and directly, to keep the channel open",
-      "It doesn't make a difference what the person next to you writes down for his answer. This is your race to run. It's your assignment to complete. It's your answer to create. How your paper compares to someone else's is not the point. The point is to fill the paper with your work.",
-      "A few years later, de Mille choreographed a ballet named Rodeo. Again, she thought her work was solid, but it resulted in little commercial fame.",
-      "Instead, your responsibility is to create. Your job is share what you have to offer from where you are right now",
-      "If your choices don't match their expectations that is their concern, not yours."
-    ],
     "favorite": 0,
     "source": "pocket"
   },
@@ -2158,98 +1044,9 @@
     "author": [],
     "link": "https://discuss.codechef.com/t/data-structures-and-algorithms/6599",
     "tags": [
-      "competitive-programming",
-      "dsa",
-      "resource"
+      "programming__dsa--resourc"
     ],
     "annotations": [],
-    "favorite": 0,
-    "source": "pocket"
-  },
-  "2895073513": {
-    "time_read": "2020-03-12",
-    "title": "You\u2019re Likely to Get the Coronavirus",
-    "author": [
-      "James Hamblin"
-    ],
-    "link": "https://www.theatlantic.com/health/archive/2020/02/covid-vaccine/607000/",
-    "tags": [
-      "coronavirus",
-      "health",
-      "politics"
-    ],
-    "annotations": [
-      "In part, containment was possible because the disease was so severe",
-      "They do not walk around feeling just a little under the weather, seeding the virus",
-      "Last week, 14 Americans tested positive on a cruise ship in Japan despite feeling fine\u2014the new virus may be most dangerous because, it seems, it may sometimes cause no symptoms at all",
-      "Though genetic sequencing is now extremely fast, making vaccines is as much art as science",
-      "The virus has raised alarm not despite that low fatality rate, but because of it.",
-      "But, as with Ebola, government funding and pharmaceutical-industry development evaporated once the sense of emergency lifted. ",
-      "At the U.S. Centers for Disease Control and Prevention in Atlanta, the boy\u2019s sputum sat for a month, waiting for its turn in a slow process of antibody-matching analysis",
-      "Overall, if all pieces fell into place, Hatchett guesses it would be 12 to 18 months before an initial product could be deemed safe and effective",
-      "Even still, drug companies have generally found it more profitable to invest in the daily-use drugs for chronic conditions. ",
-      "It makes people sick, but not in predictable, uniquely identifiable ways",
-      "These long-term government investments matter because creating vaccines, antiviral medications, and other vital tools requires decades of serious investment, even when demand is low",
-      "I think the likely outcome is that it will ultimately not be containable",
-      "Ultimately some pandemic responses will require opening borders, not closing them",
-      "During the SARS outbreak in 2003, researchers moved from obtaining the genomic sequence of the virus and into a phase 1 clinical trial of a vaccine in 20 months. Fauci wrote that his team has since compressed that timeline to just over three months for other viruses, and for the new coronavirus, \u201cthey hope to move even faster.\u201d",
-      "Even if they did, taking on a new product like this could mean massive losses, especially if the demand faded or if people, for complex reasons, chose not to use the product.",
-      "Especially in an ongoing emergency, if borders closed and supply chains broke, distribution and production could prove difficult purely as a matter of logistics.",
-      "reliably cause a protective immune-system memory but not trigger an acute inflammatory response that would itself cause symptoms.",
-      "The emerging consensus among epidemiologists is that the most likely outcome of this outbreak is a new seasonal disease\u2014a fifth \u201cendemic\u201d coronavirus.",
-      "Lipsitch predicts that within the coming year, some 40 to 70 percent of people around the world will be infected with the virus that causes COVID-19.",
-      "variant of influenza, the virus that has killed more people than any in history",
-      "The more the world enters lockdown and self-preservation mode, the more difficult it could be to soberly assess risk and effectively distribute tools, from vaccines and respirator masks to food and hand soap",
-      "The much \u201cmilder\u201d flu viruses, by contrast, kill fewer than 0.1 percent of people they infect, on average, but are responsible for hundreds of thousands of deaths every year",
-      " On Friday, Chinese scientists reported in the medical journal JAMA an apparent case of asymptomatic spread of the virus, from a patient with a normal chest CT scan",
-      "Making vaccines is so difficult, cost intensive, and high risk that in the 1980s, when drug companies began to incur legal costs over alleged harms caused by vaccines, many opted to simply quit making them"
-    ],
-    "favorite": 0,
-    "source": "pocket"
-  },
-  "2903708627": {
-    "time_read": "2020-03-05",
-    "title": "Personal Essay: Coronavirus Lockdown Is A 'Living Hell'",
-    "author": [
-      "A Resident Of Wuhan"
-    ],
-    "link": "https://www.npr.org/sections/goatsandsoda/2020/03/03/809965742/personal-essay-from-wuhan-living-in-hell",
-    "tags": [
-      "china",
-      "coronavirus",
-      "journalism",
-      "politics"
-    ],
-    "annotations": [
-      "I kept telling myself that my hard work would reward me in my personal life. And to protect myself, I decided to shut up, to be silent about politics \u2014 even when I saw people treated unfairly by the government. I thought that if I followed that path, I would be secure, I would be one of the fortunate ones.\nNow I realize that this is an illusion. A secure life is not an option with a political system that does not give us freedom to speak out and that does not communicate with us truthfully.",
-      "One day you may become the price that is paid.",
-      "But people are not thinking critically. They do not understand that if we had human rights, democracy and freedom, we would have learned about what happened in Wuhan one month earlier. And the first whistleblower would not have died for nothing.",
-      "Under the pressure of massive criticism, the government had to revoke this order for residents to provide rides.",
-      "Not everyone has the same privileges and rights. The government locked down the Internet in Wuhan. But because I knew how to get outside of the Great Firewall that blocks the Internet, I was able to obtain masks.",
-      "From former schoolmates who now work in the medical profession, I learned that medical workers were not given medical supplies and were exposed to a risk of death. Many people wonder: Why didn't they go on strike? It is because they were informed that if they went on strike, their licenses to practice medicine would be revoked and their family members' jobs would be affected.",
-      "What has happened in Wuhan is as if your house caught on fire and all your neighbors knew but forbade you from jumping out of the window. Only until the fire is out of control, and the entire town ablaze, do they slowly begin taking responsibility while highlighting their own heroic efforts"
-    ],
-    "favorite": 0,
-    "source": "pocket"
-  },
-  "2904316210": {
-    "time_read": "2020-03-04",
-    "title": "Alleviating Poverty Through Learning",
-    "author": [
-      "Anurag Kundu"
-    ],
-    "link": "https://thewire.in/government/alleviating-poverty-through-learning/amp/",
-    "tags": [
-      "delhi",
-      "education",
-      "politics"
-    ],
-    "annotations": [
-      "Please note the emphasis is on completion of syllabus, not learning.",
-      "Section 24 of the Right to Education Act casts an obligation on teachers to complete the syllabus on time",
-      "The World Bank defines learning poverty as being unable to read and understand a simple text by age 10. ",
-      "The Delhi government simply heard our teachers and students and made the most commonsensical yet the most consequential decision: teach children at the right level."
-    ],
     "favorite": 0,
     "source": "pocket"
   },
@@ -2259,10 +1056,7 @@
     "author": [],
     "link": "https://www.smashingmagazine.com/2015/03/web-accessibility-with-accessibility-api/",
     "tags": [
-      "accessibility",
-      "programming",
-      "tech",
-      "ux"
+      "web__accessibility"
     ],
     "annotations": [
       "A name that identifies it within the interface (if there is a visible label like text on a button, this will typically be its name, but it could be encoded directly in the object);",
@@ -2288,25 +1082,6 @@
     "favorite": 0,
     "source": "pocket"
   },
-  "2882402380": {
-    "time_read": "2020-03-02",
-    "title": "How Cooking Dinner Can Change Your Life",
-    "author": [
-      "SAM SIFTON"
-    ],
-    "link": "https://www.nytimes.com/2020/02/12/magazine/family-dinner-beef-stroganoff.html",
-    "tags": [
-      "food",
-      "happy",
-      "life-tips"
-    ],
-    "annotations": [
-      "Yes. See you then. Bring wine or cake, a friend or some flowers, or nothing at all save yourself.",
-      "Social scientists have a term of art to capture a person\u2019s overall happiness and sense of well-being. They call it \u201clife satisfaction\u201d and find it strongly correlates with time spent with those who care about you and about whom you care. A regular dinner with family and friends is a marvelous way to create that time."
-    ],
-    "favorite": 0,
-    "source": "pocket"
-  },
   "2897998713": {
     "time_read": "2020-02-28",
     "title": "Why 543 KB keep me up at night",
@@ -2315,10 +1090,8 @@
     ],
     "link": "https://matuzo.at/blog/why-543kb-keep-me-up-at-night/",
     "tags": [
-      "dev-tips",
-      "performance",
-      "programming",
-      "web"
+      "web__frontend",
+      "web__performance"
     ],
     "annotations": [
       "I need 1.6 MB of JavaScript (7.2 MB uncompressed) to display a table with my billing history.",
@@ -2336,30 +1109,6 @@
     "favorite": 1,
     "source": "pocket"
   },
-  "2856968886": {
-    "time_read": "2020-02-27",
-    "title": "An algorithm that learns through rewards may show how our brain does too",
-    "author": [
-      "Karen Hao"
-    ],
-    "link": "https://www.technologyreview.com/s/615054/deepmind-ai-reiforcement-learning-reveals-dopamine-neurons-in-brain/",
-    "tags": [
-      "brain",
-      "machine-learning",
-      "tech"
-    ],
-    "annotations": [
-      "The hypothesis, supported by initial experimental findings, could not only improve our understanding of mental health and motivation. It could also validate the current direction of AI research toward building more human-like general intelligence.",
-      "When a human or animal is about to perform an action, its dopamine neurons make a prediction about the expected reward. Once the actual reward is received, they then fire off an amount of dopamine that corresponds to the prediction error. ",
-      "What might it mean, for example, to have \u201cpessimistic\u201d and \u201coptimistic\u201d dopamine neurons? If the brain selectively listened to only one or the other, could it lead to chemical imbalances and induce depression?",
-      "etter reward than expected triggers a strong dopamine release, while a worse reward than expected suppresses the chemical\u2019s production.",
-      "Drawing on the work of physiologist Ivan Pavlov, who famously used dogs to show how animals learn through punishments and rewards, Minsky created a computer that could continuously learn through similar reinforcement to solve a virtual maze.",
-      " \u201cIt is amazing how this very simple dopamine response predictably follows intuitive patterns of basic biological learning processes that are now becoming a component of AI.\u201d",
-      "Whereas the old approach estimated rewards as a single number\u2014meant to equal the average expected outcome\u2014the new approach represents them more accurately as a distribution."
-    ],
-    "favorite": 0,
-    "source": "pocket"
-  },
   "2860971906": {
     "time_read": "2020-02-27",
     "title": "What I Learned from Reading \"The Pragmatic Programmer\"",
@@ -2368,7 +1117,7 @@
     ],
     "link": "https://www.freecodecamp.org/news/thought-on-the-pragmatic-programmer/",
     "tags": [
-      "dev-tips"
+      "programming--tips"
     ],
     "annotations": [
       "Show them a glimpse of the future and people will rally around you. Be a catalyst for change.",
@@ -2413,8 +1162,8 @@
     "author": [],
     "link": "https://alexpareto.com/scalability/systems/2020/02/03/scaling-100k.html",
     "tags": [
-      "devops",
-      "scalability"
+      "web__devops",
+      "web__scalability"
     ],
     "annotations": [
       "This is important when we need to serve larger file sizes like images or videos that take a long time to load + send across the world.",
@@ -2439,55 +1188,6 @@
     "favorite": 0,
     "source": "pocket"
   },
-  "2883849147": {
-    "time_read": "2020-02-14",
-    "title": "How to reduce 'attention residue' in your life",
-    "author": [
-      "Madeleine Dore"
-    ],
-    "link": "https://www.bbc.com/worklife/article/20200130-the-life-hack-to-reduce-admin-and-carve-out-downtime",
-    "tags": [
-      "life-tips",
-      "productivity",
-      "psychology",
-      "time-management"
-    ],
-    "annotations": [
-      "could work for some but not others. \u201cWe all have different preferences for dealing with life admin,\u201d says Emens. ",
-      "Yet I fell at the first hurdle: picking the day to do all these tasks, as other events and deadlines competed for my attention",
-      "Attention residue\u2019 describes the way our attention is split when we have multiple tasks or obligations on our plate, reducing our overall performance ",
-      ". \u201cIn my first year, GYLIO week ended up being stressful because I had too much to do,\u201d she recalls. ",
-      "yet it is also true that if we don't sometimes put the self-care first, we will never get to it",
-      "Whether you call it an admin morning, a \u2018power hour\u2019 or GYLIO, bundling small, unrelated chores can be a useful tool for making the invisible, visible",
-      "with an \u2018always on\u2019 culture leaving little energy for the smaller tasks.",
-      "If you are going to put 22 items on your to-do list but not actually move into action, your brain is going keep thinking about those 22 things that are not done",
-      "In my case, the GYLIO experiment proved that self-care is less about carving out time to relax amid chaos, and more about removing to-dos from our crowded lives.",
-      "Emens believes we need to find the balance between getting life admin done and safeguarding our wellbeing"
-    ],
-    "favorite": 0,
-    "source": "pocket"
-  },
-  "1984547962": {
-    "time_read": "2020-02-13",
-    "title": "What Is a Memory Wall?",
-    "author": [
-      "Sarah Clements"
-    ],
-    "link": "https://www.offtek.co.uk/blog/what-is-a-memory-wall/",
-    "tags": [
-      "hardware",
-      "tech"
-    ],
-    "annotations": [
-      " Secondly, the advantages of higher clock speeds are in part negated by memory latency, since memory access times have not been able to keep pace with increasing clock frequencies",
-      "One study found that CPU speed increased at an average rate of 55% per year from 1986 to 2000, whereas RAM speed increased by just 10% per year",
-      "this concept revolves around the idea that computer processing units (CPUs) are advancing at a fast enough pace that will leave memory (RAM) stagnant.",
-      "By delivering small amounts of high-speed memory on multiple levels of caching, computers can bridge the gap between RAM and CPU speeds",
-      "CPUs will eventually become too fast to yield any noticeable difference in computing speed. Once we reach this so-called memory wall, program/app execution time will depend almost entirely on the speed at which RAM can send data to the CPU. "
-    ],
-    "favorite": 0,
-    "source": "pocket"
-  },
   "2309420969": {
     "time_read": "2020-02-12",
     "title": "What\u2019s Server Side Rendering and do I need it?",
@@ -2496,9 +1196,8 @@
     ],
     "link": "https://medium.com/@baphemot/whats-server-side-rendering-and-do-i-need-it-cb42dc059b38",
     "tags": [
-      "programming",
-      "react",
-      "ssr"
+      "web__frontend",
+      "web__performance"
     ],
     "annotations": [
       "There\u2019s one more important thing you should consider when going with a client-side rendered app: search engines and social networks presence.",
@@ -2526,9 +1225,7 @@
     "author": [],
     "link": "https://overreacted.io/goodbye-clean-code/",
     "tags": [
-      "clean-code",
-      "dev-tips",
-      "programming"
+      "programming--tips"
     ],
     "annotations": [
       "I sure didn\u2019t think deeply about any of those things. I thought a lot about how the code looked \u2014 but not about how it evolved with a team of squishy humans.",
@@ -2541,56 +1238,14 @@
     "favorite": 0,
     "source": "pocket"
   },
-  "2856968957": {
-    "time_read": "2020-02-12",
-    "title": "How Conan O\u2019Brien and Other Top Hosts Are Tapping Into the Podcast Revolution",
-    "author": [
-      "Brent Lang",
-      "Todd Spangler"
-    ],
-    "link": "https://getpocket.com/explore/item/how-conan-o-brien-and-other-top-hosts-are-tapping-into-the-podcast-revolution",
-    "tags": [
-      "business",
-      "finance",
-      "podcast"
-    ],
-    "annotations": [
-      "Given the economics of podcasting, Malek couldn\u2019t earn what he could get from \u201cBohemian Rhapsody.\u201d But the project gave the actor the opportunity to take a producer role and incubate intellectual property. Also, it took him just two days to record.",
-      "The capital barrier to entry is low so you don\u2019t need to be a part of a big company to make a show",
-      "\u201cMy TV habits have changed completely,\u201d says O\u2019Brien, who has been on late night since 1993, first at NBC and later at TBS. \u201cI used to be someone who checked out late-night TV all the time. But I wouldn\u2019t be watching me right now. I\u2019d be binge-watching \u2018Killing Eve.\u2019\u201d",
-      "A big reason for the new investment is a mounting belief that podcasting is untapped land with gold to extract. ",
-      "weekly podcast listeners has more than doubled in the past five years, from 28 million in 2015 to 62 million in 2019",
-      "\u201cYou can tell when people think something is going to make money because of who starts emailing you,\u201d",
-      "It\u2019s likely that only 1,000 of the biggest podcasts draw a significant audience, says Norm Pattiz, founder and executive chairman of PodcastOne, ",
-      "Podcasting is attractive partly because of its profit margins. The most popular podcasts can make north of $10 million annually, and costs are minimal, often boiling down to renting studio space or paying someone to produce a show. ",
-      "Right now we can command a premium, but if you have more ads, prices will go down",
-      "launch of Luminary \u2014 a startup aiming to become the Netflix of podcasting, a new and unproven business model for the medium \u2014 with $100 million in backing and exclusive content.",
-      "Until that 1,000 becomes 50,000, we\u2019re a long way from tapping out",
-      " They note that podcasts average three spots per listening hour compared to 18 for radio.",
-      " Podcasting in 2019 represents 4% of the $16 billion total audio market ad spend (i.e., the money is mostly radio) and will approach only a 10% share in the next five years, according to a forecast from Magna.",
-      "CPM rates for podcasts range from $10 to $50 or more for the most coveted shows. Radio CPMs, by contrast, are as low as $2 to $3, although radio usually has a broader audience than podcasts do",
-      "\u201cYou can tell when people think something is going to make money because of who starts emailing you.\u201d",
-      "Technological advancements continue to spur the medium. Starting with the iPhone, smartphones have created an environment where podcasts can flourish. Faster mobile internet speeds will be a boon, along with rising adoption of smart speakers and connected cars",
-      "There\u2019s nothing analogous to a Nielsen TV rating. The standard metric for quantifying podcast consumption is downloads, or the number of times individual episodes are accessed.",
-      "Perhaps more important, it has also enabled the television host to connect with fans who may have cut the cable cord or tuned out of his TBS show \u201cConan\u201d in favor of streaming programming.",
-      "Meanwhile, Apple is said to be looking at funding original podcasts, and Sony Music Entertainment has formed a new venture with podcast vets Adam Davidson and Laura Mayer, Three Uncanny Four Productions.",
-      "As the audience has grown, so have the valuations for companies who were the quickest to get into the space. In January 2019, Spotify spent nearly $340 million for podcasting studio Gimlet Media and hosting provider Anchor before buying scripted-podcast producer Parcast. ",
-      "Right now, this brave new world of audio is mostly filled with as-yet-unrealized potential. However, a swelling listener base and the accelerating migration of major advertising dollars to the platform have led to an influx of investors and technology companies."
-    ],
-    "favorite": 0,
-    "source": "pocket"
-  },
   "2254572821": {
     "time_read": "2020-02-12",
     "title": "An Invisible Tax on the Web: Video Codecs",
     "author": [],
     "link": "https://blog.mozilla.org/blog/2018/07/11/royalty-free-web-video-codecs",
     "tags": [
-      "browser",
-      "codec",
-      "tech",
-      "video",
-      "web"
+      "technology__video",
+      "web__performance"
     ],
     "annotations": [
       " Mozilla uses Cisco\u2019s OpenH264 in Firefox.",
@@ -2619,8 +1274,7 @@
     "author": [],
     "link": "https://mkaz.blog/misc/notes-on-technical-writing/",
     "tags": [
-      "tech",
-      "writing"
+      "writing--tips"
     ],
     "annotations": [
       "Choose an action-oriented approach. Users typically want to do things.",
@@ -2639,39 +1293,14 @@
     "favorite": 0,
     "source": "pocket"
   },
-  "2857852377": {
-    "time_read": "2020-02-12",
-    "title": "Building a more private web: A path towards making third party cookies obsolete",
-    "author": [
-      "Justin Schuh"
-    ],
-    "link": "https://blog.chromium.org/2020/01/building-more-private-web-path-towards.html",
-    "tags": [
-      "browser",
-      "chrome",
-      "security",
-      "tech"
-    ],
-    "annotations": [
-      "Some browsers have reacted to these concerns by blocking third-party cookies, but we believe this has unintended consequences that can negatively impact both users and the web ecosystem. By undermining the business model of many ad-supported websites, blunt approaches to cookies encourage the use of opaque techniques such as fingerprinting (an invasive workaround to replace cookies), which can actually reduce user privacy and control. We believe that we as a community can, and must, do better.",
-      "And our experience working with the standards community to create alternatives and phase out Flash and NPAPI has proven that we can come together to solve complex challenges.",
-      "Chrome will limit insecure cross-site tracking starting in February, by treating cookies that don\u2019t include a SameSite label as first-party only, and require cookies labeled for third-party use to be accessed over HTTPS.",
-      "We plan to start the first origin trials by the end of this year, starting with conversion measurement and following with personalization.",
-      "known as Privacy Sandbox",
-      "Our intention is to do this within two years. "
-    ],
-    "favorite": 0,
-    "source": "pocket"
-  },
   "2855755651": {
     "time_read": "2020-02-12",
     "title": "Why API responses should be signed",
     "author": [],
     "link": "https://shkspr.mobi/blog/2020/01/why-api-responses-should-be-signed/",
     "tags": [
-      "security",
-      "tech",
-      "web"
+      "web__backend--ideas",
+      "web__security--ideas"
     ],
     "annotations": [
       "But we need to build a better foundation for the future. One where information brokers can say \"I have proof that this exact data came from this specific website at this precise time.\"",
@@ -2698,118 +1327,9 @@
     "author": [],
     "link": "https://missing.csail.mit.edu/?utm_source=Pointer&utm_campaign=f08a6673a8-ISSUE_171_COPY_01&utm_medium=email&utm_term=0_6ba2b83261-f08a6673a8-592502357",
     "tags": [
-      "programming",
-      "resource"
+      "programming--resource"
     ],
     "annotations": [],
-    "favorite": 0,
-    "source": "pocket"
-  },
-  "2876679122": {
-    "time_read": "2020-02-12",
-    "title": "Computer Programming Skills for 2020: Survey Results from 116,000 Developers and Hiring Managers",
-    "author": [
-      "Quincy Larson"
-    ],
-    "link": "https://www.freecodecamp.org/news/computer-programming-skills-2020-survey-developers-hiring-managers-hackerrank/",
-    "tags": [
-      "programming",
-      "survey",
-      "tech"
-    ],
-    "annotations": [
-      "And there's a new middle ground between going to university and just learning everything for free on the web: coding bootcamps.",
-      "Fewer and fewer employers require university degrees. And smaller companies are more flexible on this.",
-      "31% of developers who work at small companies don't have Bachelor's degrees (also known as \"undergraduate degrees\" or \"4 year degrees\" in the US).\n\nAnd even at large companies, 9% to 18% of their developer workforce don't have degrees.\n\nThis represents a pretty big shift from the 1990's and early 2000's when most developer jobs required a degree.",
-      "What a developer has built in the past is a much better indicator of ability than which specific tools they used to build it.",
-      " Larger companies allow for more specialization.",
-      "Most developers care less about traditional markers of professional advancement (promotions). They care more about expanding their toolbox of technical skills.",
-      "This 2,500% increase in university tuition and fees has also coincided with the birth of the world wide web, and a wealth of free learning resources."
-    ],
-    "favorite": 0,
-    "source": "pocket"
-  },
-  "2848162236": {
-    "time_read": "2020-02-12",
-    "title": "Hello world",
-    "author": [],
-    "link": "https://drewdevault.com/2020/01/04/Slow.html",
-    "tags": [
-      "performance",
-      "programming"
-    ],
-    "annotations": [
-      "Languages with a JIT fare much worse on this than compiled languages, but I have deliberately chosen not to account for this.",
-      "This was not an objective test, this is just an approximation that I hope will encourage readers to be more aware of the consequences of their abstractions, and their exponential growth as more layers are added."
-    ],
-    "favorite": 0,
-    "source": "pocket"
-  },
-  "2788456111": {
-    "time_read": "2020-02-12",
-    "title": "Moving towards a faster web",
-    "author": [],
-    "link": "https://blog.chromium.org/2019/11/moving-towards-faster-web.html",
-    "tags": [
-      "browser",
-      "chrome",
-      "tech"
-    ],
-    "annotations": [
-      "Badging is intended to identify when sites are authored in a way that makes them slow generally, looking at historical load latencies",
-      "In the future, Chrome may identify sites that typically load fast or slow for users with clear badging. ",
-      "his may take a number of forms and we plan to experiment with different options, to determine which provides the most value to our users.\n",
-      "we may expand this to include identifying when a page is likely to be slow for a user based on their device and network conditions.\n",
-      "Our long-term goal is to define badging for high-quality experiences, which may include signals beyond just speed."
-    ],
-    "favorite": 0,
-    "source": "pocket"
-  },
-  "2568499561": {
-    "time_read": "2020-02-12",
-    "title": "Running Linux Commands in Background and Foreground",
-    "author": [
-      "Abhishek"
-    ],
-    "link": "https://linuxhandbook.com/run-process-background",
-    "tags": [
-      "linux",
-      "programming",
-      "tech"
-    ],
-    "annotations": [
-      "What you have to do here is to use Ctrl+Z to suspend the running process and then use \u2018bg\u2018 (short for background) to send the process in background. The suspended process will now run in background.",
-      "See all processes running in background",
-      "To run a Linux command in background, all you have to do is to add ampersand (&) at the end of the command, like this:",
-      "Now if you simply use fg, it will bring the last process in the background job queue to foreground. In our previous example, running \u2018fg\u2019 will bring Vim editor back to the terminal.\n\nIf you want to bring a certain process to the foreground, you need to specify its job id. The job id is the number you see in the beginning of each line in the output of the \u2018jobs\u2019 command."
-    ],
-    "favorite": 0,
-    "source": "pocket"
-  },
-  "2521085359": {
-    "time_read": "2020-02-11",
-    "title": "Exploring the GPU Architecture",
-    "author": [
-      "Niels Hagoort"
-    ],
-    "link": "https://nielshagoort.com/2019/03/12/exploring-the-gpu-architecture/",
-    "tags": [
-      "gpu",
-      "hardware",
-      "tech"
-    ],
-    "annotations": [
-      "In the consumer market, a GPU is mostly used to accelerate gaming graphics. Today, GPGPU\u2019s (General Purpose GPU) are the choice of hardware to accelerate computational workloads in modern High Performance Computing (HPC) landscapes.",
-      "Each SM accommodates a layer-1 instruction cache layer with its associated cores. Typically, one SM uses a dedicated layer-1 cache and a shared layer-2 cache before pulling data from global GDDR-5 memory",
-      "\u00a0 When examining the current NVIDIA flagship offering, the Tesla V100, one device contains 80 SM\u2019s, each containing 64 cores making a total of 5120 cores! Tasks aren\u2019t scheduled to individual cores, but to processor clusters and SM\u2019s",
-      "A single GPU device consists of multiple Processor Clusters (PC) that contain multiple Streaming Multiprocessors (SM).",
-      "GPU is all about throughput optimization, allowing to push as many as possible tasks through is internals at once. It does so by being able to parallel process a task",
-      " common CPU is optimized to be as quick as possible to finish a task at a as low as possible latency, while keeping the ability to quickly switch between operations. It\u2019s nature is all about processing tasks in a serialized way.",
-      "GPU is all about putting available cores to work and it\u2019s less focussed on low latency cache memory access",
-      "Both use the memory constructs of cache layers, memory controller and global memory. ",
-      "high-level overview of modern CPU architectures indicates it is all about low latency memory access by using significant cache memory layers.",
-      "The potential memory access \u2018latency\u2019 is masked as long as the GPU has enough computations at hand,\u00a0keeping it busy."
-    ],
     "favorite": 0,
     "source": "pocket"
   },
@@ -2821,10 +1341,7 @@
     ],
     "link": "https://medium.com/@dtkatz/3-ways-to-fix-the-cors-error-and-how-access-control-allow-origin-works-d97d55946d9",
     "tags": [
-      "browser",
-      "dev-tips",
-      "security",
-      "web"
+      "web__security"
     ],
     "annotations": [
       "\nFix one: install the Allow-Control-Allow-Origin plugin",
@@ -2852,11 +1369,7 @@
     ],
     "link": "https://developers.google.com/web/updates/2018/09/inside-browser-part3",
     "tags": [
-      "browser",
-      "chrome",
-      "performance",
-      "tech",
-      "web"
+      "web__browser"
     ],
     "annotations": [
       "The most important thing to grasp in rendering pipeline is that at each step the result of the previous operation is used to create new data. For example, if something changes in the layout tree, then the Paint order needs to be regenerated for affected parts of the document.",
@@ -2900,10 +1413,7 @@
     ],
     "link": "https://developers.google.com/web/updates/2018/09/inside-browser-part2",
     "tags": [
-      "browser",
-      "chrome",
-      "tech",
-      "web"
+      "web__browser"
     ],
     "annotations": [
       "Navigation Preload is a mechanism to speed up this process by loading resources in parallel to service worker startup. It marks these requests with a header, allowing servers to decide to send different content for these requests; for example, just updated data instead of a full document.\n\n",
@@ -2932,10 +1442,7 @@
     "title": "Three Steps To Get Up To Speed On Any Subject Quickly",
     "author": [],
     "link": "https://getpocket.com/explore/item/three-steps-to-get-up-to-speed-on-any-subject-quickly",
-    "tags": [
-      "life-tips",
-      "productivity"
-    ],
+    "tags": [],
     "annotations": [
       " To make things worse, Greenwald confesses he is \"a very slow reader\" who doesn't have time to consume huge piles of research or take multiple passes through material. To survive in the newsroom, he developed two routines.",
       "No one warns us that adulthood is full of such sweat-inducing dilemmas, where the stakes are your reputation, your career, and (rightly or wrongly) even your sense of self-worth. When you\u2019re in over your head, how do you quickly figure out what\u2019s important?",
@@ -2955,8 +1462,6 @@
     ],
     "link": "https://jamesclear.com/saying-no",
     "tags": [
-      "life-tips",
-      "productivity",
       "psychology"
     ],
     "annotations": [
@@ -2987,9 +1492,7 @@
     ],
     "link": "https://medium.com/better-programming/kiss-dry-and-code-principles-every-developer-should-follow-b77d89f51d74",
     "tags": [
-      "clean-code",
-      "dev-tips",
-      "programming"
+      "programming--tips"
     ],
     "annotations": [
       "This principle states that a piece of code should be implemented in just one place in the source code. ",
@@ -3007,71 +1510,7 @@
       "If you have a complex piece of code, always try to break it into smaller more maintainable code",
       "KISS (Keep It Simple Stupid)"
     ],
-    "favorite": 0,
-    "source": "pocket"
-  },
-  "2788499454": {
-    "time_read": "2020-01-14",
-    "title": "How to write a commit message",
-    "author": [
-      "Writing for Developers"
-    ],
-    "link": "https://writingfordevelopers.substack.com/p/how-to-write-a-commit-message",
-    "tags": [
-      "dev-tips",
-      "git",
-      "programming"
-    ],
-    "annotations": [
-      "Intervention (verb + object) + Effect (\u201cto\u201d + verb + object)",
-      "Detailed explanations of what you are doing and, more importantly, why you are doing should go into the Pull Request description.",
-      "The benefit is that you save some work, creating one encompassing description for several commits. The risk of doing that is that all that context information is locked to whatever tool you use for version control management, while the commit messages are kept by Git itself",
-      "single sentence is enough for a commit message."
-    ],
-    "favorite": 0,
-    "source": "pocket"
-  },
-  "2846512059": {
-    "time_read": "2020-01-10",
-    "title": "The End of Indie Web Browsers: You Can (Not) Compete",
-    "author": [
-      "THE CREATOR OF"
-    ],
-    "link": "https://blog.samuelmaddock.com/posts/the-end-of-indie-web-browsers/",
-    "tags": [
-      "chrome",
-      "firefox",
-      "security",
-      "tech",
-      "web"
-    ],
-    "annotations": [
-      "The World Wide Web Consortium (W3C) facilitates the standardization process by which these technologies are added to the web.",
-      "Unfortunately, the CDM is only one small part of enabling DRM on the web. Convincing media distributors to buy into a DRM solution is the much more monumental requirement. A level of trust is to be expected which typically could only be established by a large corporation.",
-      "EME provides a common browser API that may be used to discover, select, and interact with Content Decryption Modules (CDM). A browser must provide a compatible CDM to enable playback of encrypted media.",
-      "DRM in software is usually a blackbox which controls the way you access content and makes it harder to copy and redistribute. It isn't always 100% effective, given that digital piracy still exists, but it prevents most folks from being able to save the movie they're watching and share it with a friend.",
-      "Reviewing the Widevine DRM Architecture Overview provides a more complete picture of what level of effort could be required",
-      "We want this feature to work on all websites so we'll need to provide a CDM for sites like Netflix. If we can't do that, our users will need to keep switching to another browser just for those sites. No good.",
-      "The Open Web Platform is the collection of open (royalty-free) technologies which enables the Web. Using the Open Web Platform, everyone has the right to implement a software component of the Web without requiring any approvals or waiving license fees.",
-      "As a means of removing these concerns and enabling more technologies within the open web platform, the W3C published Encrypted Media Extensions (EME).",
-      "To defend against digital pirates trying to access their content illegally, media distributors resort to using tools referred to as Digital Rights Management (DRM)."
-    ],
     "favorite": 1,
-    "source": "pocket"
-  },
-  "2848597332": {
-    "time_read": "2020-01-10",
-    "title": "Don\u2019t Marry the Nice Guy",
-    "author": [
-      "Emily Kingsley"
-    ],
-    "link": "https://humanparts.medium.com/dont-marry-a-nice-guy-48e7a54de722",
-    "tags": [
-      "life-tips",
-      "relationship"
-    ],
-    "annotations": [],
-    "favorite": 0,
     "source": "pocket"
   },
   "2836109417": {
@@ -3080,8 +1519,6 @@
     "author": [],
     "link": "https://getpocket.com/explore/item/read-this-if-you-re-going-through-adversity",
     "tags": [
-      "life-tips",
-      "productivity",
       "psychology"
     ],
     "annotations": [
@@ -3103,11 +1540,8 @@
     ],
     "link": "https://developers.google.com/web/updates/2018/09/inside-browser-part1",
     "tags": [
-      "browser",
-      "chrome",
-      "javascript",
-      "tech",
-      "web"
+      "programming__os",
+      "web__browser"
     ],
     "annotations": [
       "Well, it could be one process with many \ndifferent threads or many different processes with a few threads communicating over IPC.",
@@ -3137,30 +1571,6 @@
       "At the top is the browser process coordinating with other processes that take care of different \nparts of the application"
     ],
     "favorite": 1,
-    "source": "pocket"
-  },
-  "1568021988": {
-    "time_read": "2019-12-20",
-    "title": "How to escape the overthinking trap: stop judging yourself",
-    "author": [
-      "Mark Rice-Oxley"
-    ],
-    "link": "https://www.theguardian.com/commentisfree/2017/jan/16/escape-overthinking-trap-stop-juding-yourself",
-    "tags": [
-      "life-tips",
-      "productivity",
-      "psychology"
-    ],
-    "annotations": [
-      "But how to cultivate that sense of detachment from a poisonous, unhelpful or just plain wrong stream of thinking? Visual clues can help: a post-it on a computer screen (mine just says \u201cthinking \u2026\u201d) or a screensaver on a phone. I wear a black wristband to remind me why I do this. A discreet tattoo might do the same, if that\u2019s your thing.",
-      " But each time you are submerged, eventually you notice and pull yourself out and sit undisturbed, again and again until it starts to become habit to notice the thought rather than believe it.",
-      "And second, whether right or wrong, these self-evaluations simply are not helpful. They just make us feel worse.",
-      "We need a completely new relationship with our thoughts. Instead of viewing the world and our experience as we think they ought to be, we need to treat them as they actually are. ",
-      "You\u2019re not who you think you are. You\u2019re so much more than that.",
-      " First, it is probably incorrect. ",
-      "we need to direct our attentions to things we can influence, and leave the rest be."
-    ],
-    "favorite": 0,
     "source": "pocket"
   }
 }
