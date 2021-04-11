@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <h1>You Reading Stats This Week- </h1>
+
+    <h2>Number of articles read:  {{number_articles_read}}</h2>
+    <h2>Number of annotations:  {{total_annotations}}</h2>
+    
+    <h1>Below is a brief of the articles you read- </h1>
+
+    {% for stat in stats %}
+        <h2><a href="{{stat[3]}}">{{stat[1]}}</a></h2>
+        <h3>Tags: {{', '.join(stat[4])}}</h3>
+        <h2>Annotations: </h2>
+        <ul>
+        {% for annotation in stat[5] %}
+            <li>{{annotation}}</li>
+        {% endfor %}
+        </ul>
+    {% endfor %}
+
+</body>
