@@ -17,7 +17,7 @@ git checkout "$main_branch"
 
 rm -rf tmp/
 mkdir tmp
-python main.py
+python main.py -e
 
 git checkout "$gh_pages_branch"
 
