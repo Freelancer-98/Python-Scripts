@@ -1,6 +1,8 @@
 certifi==2020.12.5
 chardet==4.0.0
 idna==2.10
+Jinja2==2.11.3
+MarkupSafe==1.1.1
 pocket==0.3.6
 requests==2.25.1
 urllib3==1.26.4
