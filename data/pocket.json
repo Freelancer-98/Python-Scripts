@@ -1,4 +1,27 @@
 {
+  "3119040040": {
+    "time_read": "2021-04-15",
+    "title": "Cognitive load of software teams",
+    "author": [
+      "Joh Sweller"
+    ],
+    "link": "https://tonics.substack.com/p/cognitive-load-of-software-teams",
+    "tags": [
+      "psychology",
+      "team__management"
+    ],
+    "annotations": [
+      "Minimise intrinsic cognitive load (through training, good choice of technologies, hiring, pair programming, etc.)\n\n",
+      "Eliminate extraneous cognitive load (boring or superfluous tasks or commands that add little value to retain in the working memory and can often be automated away).",
+      "Germane Cognitive Load - load related to deep thinking - What should be the architecture of my system? What investments do we need to make for the future?",
+      "Intrinsic Cognitive Load - load generated while doing your core job - how easy is it for you to write code?",
+      "Extraneous Cognitive Load - load related to managing dependencies of your core job - how do I set up my service? How do I test my service? Who do I need to speak to get this working?",
+      "Doing so allows more space for Germane cognitive load (which is where the \u201cvalue add\u201d thinking lies).",
+      "Recognising the type of work that each team is engaged in should give you an indication of how much you can load up a team."
+    ],
+    "favorite": 0,
+    "source": "pocket"
+  },
   "3236473980": {
     "time_read": "2021-04-14",
     "title": "Gatsby vs Next.js in 2021 - What, Why and When?",
@@ -402,7 +425,8 @@
     "author": [],
     "link": "https://hbr.org/2020/11/how-apple-is-organized-for-innovation",
     "tags": [
-      "business__management"
+      "business__management",
+      "team__management"
     ],
     "annotations": [],
     "favorite": 0,
