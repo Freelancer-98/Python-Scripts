@@ -1,4 +1,26 @@
 {
+  "3236473980": {
+    "time_read": "2021-04-14",
+    "title": "Gatsby vs Next.js in 2021 - What, Why and When?",
+    "author": [
+      "Jamees Bedford"
+    ],
+    "link": "https://www.jame.es/gatsby-vs-next-js-2021/",
+    "tags": [
+      "web__frontend",
+      "web__performance"
+    ],
+    "annotations": [
+      "Also - GraphQL... Whilst it is undeniably cool, one of the main purposes is lost in this case. As I mentioned earlier in the article, GraphQL is there to cure over-fetching, but Gatsby's bread and butter is Static Sites, which means that fetching all of the data from the API's will cause no extensions to runtime, it would take marginally longer at build time granted, but for flexibility that seems a worthwhile trade.",
+      "The fact that it is so opinionated on how you should be fetching your data, and the fact it focuses to intensely on the plugin ecosystem means that it is often hard to diverge from these",
+      "Next.js is more versatile and flexible. If your project has the potential to grow beyond its current spec, I would go with Next",
+      "But Gatsby makes it easier to get up and running quicker and achieve more with less coding. If you want to build something that is unlikely to diverge much from the current spec, Gatsby is a great choice.",
+      "The main argument for Next this time last year was the fact it was flexible. It didn't force the developer into an ecosystem of plugins and GraphQL. Making Next.js able to Pre-render pages at build time (SSG) or request time (SSR) in a single project and give the developer to choose one or the other and switch between the two is a huge gain for flexibility.",
+      "I made the statement in my last article that Gatsby is better for smaller applications, because if you have a massive amount of data you are going to want to potentially implement Server Side Rendering."
+    ],
+    "favorite": 0,
+    "source": "pocket"
+  },
   "3263645559": {
     "time_read": "2021-04-13",
     "title": "How Chess.com built a streaming empire",
