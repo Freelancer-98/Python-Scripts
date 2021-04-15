@@ -10,22 +10,17 @@ gh_pages_branch="gh-pages"
 git config user.name "$GITHUB_ACTOR"
 git config user.email "${GITHUB_ACTOR}@bots.github.com"
 
-git checkout "$gh_pages_branch"
-rm -rf data/tmp
-
 git checkout "$main_branch"
 
-rm -rf tmp/
 mkdir tmp
 python main.py -e
 
 git checkout "$gh_pages_branch"
 
-cp -r tmp/* data
-rm -rf tmp/
+cp tmp/pocket.json data
+rm -r tmp/
 
 git add .
-
 
 if git status | grep 'new file\|modified'
 then
