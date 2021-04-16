@@ -1,3 +1,5 @@
+import { promises as fs } from 'fs'
+import path from 'path'
 import Link from 'next/link'
 
 export default ({read}) => {
@@ -16,8 +18,10 @@ export default ({read}) => {
     }
 
 export async function  getStaticProps(context) {
-    const res = await fetch(`https://nilshah98.github.io/Knowledge-Lake/data/pocket.json`)
-    const data = await res.json()
+
+    const dataDir = path.join(process.cwd(), '../data')
+    const rawData = await fs.readFile(dataDir + '/pocket.json', 'utf-8')
+    const data = JSON.parse(rawData)
 
     return {
         props: {read: data}

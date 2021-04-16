@@ -1,3 +1,5 @@
+import { promises as fs } from 'fs'
+import path from 'path'
 
 export default ({read}) => {
 
@@ -17,8 +19,10 @@ export default ({read}) => {
 }
 
 export async function getStaticPaths() {
-    const res = await fetch(`https://nilshah98.github.io/Knowledge-Lake/data/pocket.json`)
-    const data = await res.json()
+    const dataDir = path.join(process.cwd(), '../data')
+    const rawData = await fs.readFile(dataDir + '/pocket.json', 'utf-8')
+    const data = JSON.parse(rawData)
+    
     const paths = Object.keys(data).map(r => ({
         params: {id: r}
     }))
@@ -27,8 +31,9 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-    const res = await fetch(`https://nilshah98.github.io/Knowledge-Lake/data/pocket.json`)
-    const data = await res.json()
+    const dataDir = path.join(process.cwd(), '../data')
+    const rawData = await fs.readFile(dataDir + '/pocket.json', 'utf-8')
+    const data = JSON.parse(rawData)
 
     return {
         props: {read : data[params.id]}
