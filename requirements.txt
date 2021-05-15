@@ -4,5 +4,6 @@ idna==2.10
 Jinja2==2.11.3
 MarkupSafe==1.1.1
 pocket==0.3.6
+python-dotenv==0.17.1
 requests==2.25.1
 urllib3==1.26.4
