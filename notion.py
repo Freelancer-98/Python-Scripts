@@ -1,6 +1,7 @@
 from dotenv import load_dotenv
 import requests
 import os
+import json
 
 '''
 Return : records    : Rows of the media list database in Notion
@@ -53,6 +54,11 @@ def get_pocket_ids(records):
         title_authors.add(title + '_' + ('_').join(authors))
     return title_authors
 
+'''
+Input   : records       : Rows of the tags database in Notion
+                        : {properties : field : {}}
+Return  : tags : { tag_name : tag_id }
+'''
 def get_tags_ids(records):
     tags = dict()
     for r in records:
@@ -61,12 +67,36 @@ def get_tags_ids(records):
         tags[tag] = id
     return tags
 
-def create_media(record):
-    pass
+def create_media(record, tags_db):
+    payload = dict()
+    payload['parent'] = {'database_id': MEDIA_DB_ID}
+    payload['properties'] = dict()
+    props = payload['properties']
+    props['Link'] = {'url' : record['link']}
+    props['Date'] = {'date': {'start': record['time_read']}}
+    props['Media'] = {'select': {'name': 'Article'}}
+    props['Title'] = {'title': [ 
+                            {'text' : { 'content' : record['title'] } }
+                            ]}
+    props['Tags'] = {'relation': []}
+    for t in record['tags'] : 
+        if t in tags_db.keys():
+            props['Tags']['relation'].append({'id' : tags_db[t]})
+        else:
+            pass
+    # props['Author'] = {'multi_select': []}
+    # for a in record['author']:
+    #     props['Author']['multi_select'].append({'name' : a})
+    return payload
 
 def post_media(media):
-    pass
-
+    create_page_resp = requests.post(f'https://api.notion.com/v1/pages', headers={ 'Authorization' : NOTION_TOKEN, 'Notion-Version' : NOTION_VERSION }, json=media)
+    if create_page_resp.status_code == 200:
+        return True
+    else:
+        print(create_page_resp.text)
+        print(create_page_resp.reason)
+        return False
 
 if __name__ == '__main__':
     load_dotenv()
@@ -91,5 +121,37 @@ if __name__ == '__main__':
     Future -
     5. Add block to the newly created page and append annotations
     '''
+
+    # Step 0.
+    pocket_db = get_pocket_records()
+    media_db = get_media_records()
+    tags_db = get_tags_records()
+
+    # Step 1.
+    media_ids = get_media_ids(media_db['results'])
+    tags_ids = get_tags_ids(tags_db['results'])
+
+    # Step 2.
+    # Instead of ids can use index, if it is an array.
+    new_ids = []
+    for k,p in pocket_db.items():
+        title = p['title']
+        authors = p['author']
+        authors.sort()
+        p_id = title + '_' + ('_').join(authors)
+
+        if p_id not in media_ids :
+            new_ids.append(k)
+
+    for id in new_ids[:1] :
+        # Step 3.
+        payload = create_media(pocket_db[id], tags_ids)
+
+        # Step 4.
+        if post_media(payload):
+            print(f'Created { id } page')
+        else:
+            print('Error')
+
 
 
