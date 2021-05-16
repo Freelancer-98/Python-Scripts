@@ -32,6 +32,7 @@ jobs:
     - name: Update pocket list
       run: |
           bash ./main.sh 2>> /tmp/apidata_err
+          if [ $? -eq 0 ]; then python notion.py; fi
           echo "the job completed"
       env:
           POCKET_CONSUMER_KEY: ${{ secrets.POCKET_CONSUMER_KEY }}
