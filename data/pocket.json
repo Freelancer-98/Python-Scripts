@@ -1,4 +1,49 @@
 {
+  "3198490760": {
+    "time_read": "2021-05-16",
+    "title": "The True Meaning of Technical Debt \ud83d\udcb8",
+    "author": [
+      "Luca Rossi"
+    ],
+    "link": "https://refactoring.fm/p/the-true-meaning-of-technical-debt",
+    "tags": [
+      "product__management"
+    ],
+    "annotations": [
+      "Increasing Design effort brings diminishing results after a while, so it's up to you to find the sweet spot, based on how solid is your company planning vs how much change you can expect in the future.",
+      "Ward describes debt as the natural result of writing code about something we don't have a proper understanding of.\nHe doesn't talk of poor code \u2014 which he says accounts for a very minor share of debt.\nHe talks of disagreement between business needs and how the software has been written.",
+      "Actually learning along the way \u2014 analyze, with the help of stakeholders, what still fits and what is going to become debt.",
+      "It's intuitive and backed by common sense \u2014 something that piles up and makes you slower and slower, just like interest on existing debt.",
+      "Spending regular time on refactoring \u2014 reorganize the code periodically to reflect your updated understanding. This is easy to dismiss, letting the debt pile up until it\u2019s too late and you need a big rewrite. Taking baby steps every time is more sustainable both for your business, and your development team.",
+      "A thorough Design phase provides limited protection against future changes, so a leaner cycle might work better",
+      "Rapid Evolution \u2014 we built the right thing, but the landscape changed quickly and made it obsolete.",
+      "Wrong Design \u2014 what we built was wrong from the start!",
+      "Requirements may still be met on the surface, but something is wrong under the hood \u2014 an abstraction that doesn't fit, some duplication, scalability issues, and so on.",
+      "even if we build the right thing, it risks becoming obsolete fast, because of the ever-changing business landscape."
+    ],
+    "favorite": 0,
+    "source": "pocket"
+  },
+  "3321687207": {
+    "time_read": "2021-05-16",
+    "title": "Hosting SQLite databases on Github Pages",
+    "author": [],
+    "link": "https://phiresky.github.io/blog/2021/hosting-sqlite-databases-on-github-pages/",
+    "tags": [
+      "programming__database",
+      "web__devops"
+    ],
+    "annotations": [
+      "The above query should do 10-20 GET requests, fetching a total of 130 - 270KiB, depending on if you ran the above demos as well. Note that it only has to do 20 requests and not 270 (as would be expected when fetching 270 KiB with 1 KiB at a time). That\u2019s because I implemented a pre-fetching system that tries to detect access patterns through three separate virtual read heads and exponentially increases the request size for sequential reads. This means that index scans or table scans reading more than a few KiB of data will only cause a number of requests that is logarithmic in the total byte length of the scan. ",
+      "All of this only works well when we have indices in the database that match the queries well. For example, the index used in the above query is a INDEX ON wdi_data (indicator_code, country_code, year, value). If that index did not include the value column, the SQLite engine would have to do another random access (unpredictable) read and thus HTTP request to retrieve the actual value for every data point. If the index was ordered country_code, indicator_code, ..., then we would be able to quickly get all indicators for a single country, but not all country values of a single indicator.",
+      "Since fetching data via HTTP has a pretty large overhead, we need to fetch data in chunks and find some balance between the number of requests and the used bandwidth. Thankfully, SQLite already organizes its database in \"pages\" with a user-defined page size (4 KiB by default). I\u2019ve set the page size to 1 KiB for this database.",
+      "From SQLite\u2019s perspective, it just looks like it\u2019s living on a normal computer with an empty filesystem except for a file called /wdi.sqlite3 that it can read from. Of course it can\u2019t write to this file, but a read-only database is still very useful.",
+      "sql.js only allows you to create and read from databases that are fully in memory though - so I implemented a virtual file system that fetches chunks of the database with HTTP Range requests when SQLite tries to read from the filesystem: sql.js-httpvfs.",
+      "So how do you use a database on a static file hoster? Firstly, SQLite (written in C) is compiled to WebAssembly. SQLite can be compiled with emscripten without any modifications, and the sql.js library is a thin JS wrapper around the wasm code."
+    ],
+    "favorite": 0,
+    "source": "pocket"
+  },
   "2637134274": {
     "time_read": "2021-05-03",
     "title": "A few things I wish I knew before I started working as a software engineer",
