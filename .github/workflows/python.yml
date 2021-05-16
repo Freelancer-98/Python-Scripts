@@ -37,4 +37,7 @@ jobs:
       env:
           POCKET_CONSUMER_KEY: ${{ secrets.POCKET_CONSUMER_KEY }}
           POCKET_ACCESS_TOKEN: ${{ secrets.POCKET_ACCESS_TOKEN }}
-        
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+          NOTION_VERSION: ${{ secrets.NOTION_VERSION }}
+          MEDIA_DB_ID: ${{ secrets.MEDIA_DB_ID }}
+          TAGS_DB_ID: ${{ secrets.TAGS_DB_ID }}
