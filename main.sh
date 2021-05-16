@@ -33,4 +33,5 @@ else
     echo "No changes since last run"
 fi
 
+git checkout "$main_branch"
 echo "finish"
