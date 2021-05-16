@@ -73,7 +73,10 @@ def create_media(record, tags_db):
         if t in tags_db.keys():
             props['Tags']['relation'].append({'id' : tags_db[t]})
         else:
-            pass
+            tag_resp = post_tag(t)
+            if 'Error' not in tag_resp.keys():
+                props['Tags']['relation'].append({'id' : tag_resp['id']})
+                tags_db[t] = tag_resp['id']
     return payload
 
 def post_media(media):
@@ -83,6 +86,18 @@ def post_media(media):
     else:
         print(create_page_resp.text)
         return False
+
+def post_tag(tag):
+    payload = dict()
+    payload['parent'] = {'database_id': TAGS_DB_ID}
+    payload['properties'] = {'Name': {'title': [ 
+                                                { 'text': { 'content': tag } }
+                                                ]}}
+    create_tag_resp = requests.post(f'https://api.notion.com/v1/pages', headers={ 'Authorization' : NOTION_TOKEN, 'Notion-Version' : NOTION_VERSION }, json=payload)
+    if create_tag_resp.status_code == 200:
+        return create_tag_resp.json()
+    else:
+        return {'Error' : create_tag_resp.text}
 
 if __name__ == '__main__':
     load_dotenv()
@@ -135,6 +150,7 @@ if __name__ == '__main__':
             print(f'Created { id } page')
         else:
             print('Error')
+
 
 
 
