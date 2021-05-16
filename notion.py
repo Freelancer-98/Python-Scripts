@@ -13,6 +13,20 @@ def get_media_records():
     else :
         return {'Error' : all_records_resp.status_code}
 
+def get_pocket_records():
+    pocket_resp = requests.get('https://nilshah98.github.io/Knowledge-Lake/data/pocket.json')
+    if pocket_resp.status_code == 200 :
+        return pocket_resp.json()
+    else:
+        return {'Error' : pocket_resp.status_code}
+
+def get_tags_records():
+    tags_resp = requests.post( f'https://api.notion.com/v1/databases/{TAGS_DB_ID}/query', headers={ 'Authorization' : NOTION_TOKEN } )
+    if tags_resp.status_code == 200:
+        return tags_resp.json()
+    else:
+        return {'Error' : tags_resp.status_code}
+
 '''
 Input   : records       : Rows of the media list database in Notion
                         : {properties : field : {}}
@@ -30,13 +44,6 @@ def get_media_ids(records):
             title_authors.add(title + '_' + ('_').join(authors))
     return title_authors
 
-def get_pocket_records():
-    pocket_resp = requests.get('https://nilshah98.github.io/Knowledge-Lake/data/pocket.json')
-    if pocket_resp.status_code == 200 :
-        return pocket_resp.json()
-    else:
-        return {'Error' : pocket_resp.status_code}
-
 def get_pocket_ids(records):
     title_authors = set()
     for r in records.values():
@@ -45,13 +52,6 @@ def get_pocket_ids(records):
         authors.sort()
         title_authors.add(title + '_' + ('_').join(authors))
     return title_authors
-
-def get_tags_records():
-    tags_resp = requests.post( f'https://api.notion.com/v1/databases/{TAGS_DB_ID}/query', headers={ 'Authorization' : NOTION_TOKEN } )
-    if tags_resp.status_code == 200:
-        return tags_resp.json()
-    else:
-        return {'Error' : tags_resp.status_code}
 
 def get_tags_ids(records):
     tags = dict()
