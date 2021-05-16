@@ -31,28 +31,15 @@ def get_tags_records():
 '''
 Input   : records       : Rows of the media list database in Notion
                         : {properties : field : {}}
-Return  : title_author  : Set('<title>_<author1>_<author2>')
-                        : If multiple authors are there, they will be sorted alphabetically
+Return  : title_author  : Set(<title>)
 '''
 def get_media_ids(records):
-    title_authors = set()
+    media_ids = set()
     for r in records:
-        authors = []
         if r['properties']['Title']['title']:
             title = r['properties']['Title']['title'][0]['plain_text']
-            authors = list(map(lambda x : x['name'], r['properties']['Author']['multi_select']))
-            authors.sort()
-            title_authors.add(title + '_' + ('_').join(authors))
-    return title_authors
-
-def get_pocket_ids(records):
-    title_authors = set()
-    for r in records.values():
-        title = r['title']
-        authors = r['author']
-        authors.sort()
-        title_authors.add(title + '_' + ('_').join(authors))
-    return title_authors
+            media_ids.add(title)
+    return media_ids
 
 '''
 Input   : records       : Rows of the tags database in Notion
@@ -76,7 +63,10 @@ def create_media(record, tags_db):
     props['Date'] = {'date': {'start': record['time_read']}}
     props['Media'] = {'select': {'name': 'Article'}}
     props['Title'] = {'title': [ 
-                            {'text' : { 'content' : record['title'] } }
+                                {'text' : { 'content' : record['title'] } }
+                                ]}
+    props['Authors'] = {'rich_text': [
+                                {'text': {'content': ','.join(record['author'])}}
                             ]}
     props['Tags'] = {'relation': []}
     for t in record['tags'] : 
@@ -84,9 +74,6 @@ def create_media(record, tags_db):
             props['Tags']['relation'].append({'id' : tags_db[t]})
         else:
             pass
-    # props['Author'] = {'multi_select': []}
-    # for a in record['author']:
-    #     props['Author']['multi_select'].append({'name' : a})
     return payload
 
 def post_media(media):
@@ -95,7 +82,6 @@ def post_media(media):
         return True
     else:
         print(create_page_resp.text)
-        print(create_page_resp.reason)
         return False
 
 if __name__ == '__main__':
@@ -135,10 +121,7 @@ if __name__ == '__main__':
     # Instead of ids can use index, if it is an array.
     new_ids = []
     for k,p in pocket_db.items():
-        title = p['title']
-        authors = p['author']
-        authors.sort()
-        p_id = title + '_' + ('_').join(authors)
+        p_id = p['title']
 
         if p_id not in media_ids :
             new_ids.append(k)
