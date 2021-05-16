@@ -1,12 +1,12 @@
 # This workflow will install Python dependencies, run tests and lint with a single version of Python
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-python-with-github-actions
 
-name: Update Pocket Data
+name: Update Notion Table
 
 on:
   schedule:
     # every day at 1AM
-    - cron: "0 1 * * *"
+    - cron: "0 2 * * *"
   push:
     branches: [ master ]
   pull_request:
@@ -29,10 +29,12 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-    - name: Update pocket list
+    - name: Update notion table
       run: |
-          bash ./main.sh 2>> /tmp/apidata_err
+          python notion.py
           echo "the job completed"
       env:
-          POCKET_CONSUMER_KEY: ${{ secrets.POCKET_CONSUMER_KEY }}
-          POCKET_ACCESS_TOKEN: ${{ secrets.POCKET_ACCESS_TOKEN }}
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+          NOTION_VERSION: ${{ secrets.NOTION_VERSION }}
+          MEDIA_DB_ID: ${{ secrets.MEDIA_DB_ID }}
+          TAGS_DB_ID: ${{ secrets.TAGS_DB_ID }}
