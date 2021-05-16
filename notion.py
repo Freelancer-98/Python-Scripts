@@ -58,7 +58,11 @@ def create_media(record, tags_db):
     payload = dict()
     payload['parent'] = {'database_id': MEDIA_DB_ID}
     payload['properties'] = dict()
+    payload['children'] = []
+
     props = payload['properties']
+    blocks = payload['children']
+
     props['Link'] = {'url' : record['link']}
     props['Date'] = {'date': {'start': record['time_read']}}
     props['Media'] = {'select': {'name': 'Article'}}
@@ -77,6 +81,14 @@ def create_media(record, tags_db):
             if 'Error' not in tag_resp.keys():
                 props['Tags']['relation'].append({'id' : tag_resp['id']})
                 tags_db[t] = tag_resp['id']
+
+    blocks.append({'object' :'block', 'type': 'heading_1', 'heading_1': {
+                    'text': [{'type': 'text', 'text': {'content': 'Annotations'}}]
+                }})
+    for a in record['annotations']:
+        blocks.append({'object' :'block', 'type': 'numbered_list_item', 'numbered_list_item': {
+                    'text': [{'type': 'text', 'text': {'content': a}}]
+                }})
     return payload
 
 def post_media(media):
@@ -141,7 +153,7 @@ if __name__ == '__main__':
         if p_id not in media_ids :
             new_ids.append(k)
 
-    for id in new_ids[:1] :
+    for id in new_ids :
         # Step 3.
         payload = create_media(pocket_db[id], tags_ids)
 
