@@ -1,4 +1,22 @@
 {
+  "3219025813": {
+    "time_read": "2021-06-01",
+    "title": "My year in data",
+    "author": [],
+    "link": "https://samplesize.one/blog/posts/my_year_in_data/",
+    "tags": [
+      "productivity--tips",
+      "time__management"
+    ],
+    "annotations": [
+      "The moment I started, every day became an exercise in optimisation",
+      "This is already pretty cool, but the most important outcome of introducing these points is that I stopped thinking about productivity in binary terms. Before the points, whenever I was too tired to do work, my thinking process would go like this: \"Since I'm not doing work (bad), I might as well scroll some social media (also bad)\", while after the points this became \"Alright, I am too tired to do work (not gaining 4 points) but maybe I can read a book (3 points) or go for a walk and listen to a podcast (3 points) instead\"",
+      "Another important consideration is that 'hours spent on' is not a great measure of productivity - I want to achieve things and not just spend time doing busywork. To make sure that this is the case, I do weekly summaries, where I compare what I wanted to accomplish vs what I actually did accomplish in the past week and plan for the upcoming week.",
+      "As I was analysing at my data throughout the year, I was quite disappointed in how little I worked and was looking for a way to increase it. Inspired by this post I decided to gamify my productivity by giving myself points for activities I wanted to do more of. I was hoping that they would act as sources of instantenous pleasure for my monkey brain (which wants fun now and doesn't really care about future me) to make it do things that might be less fun but beneficial in the long run. "
+    ],
+    "favorite": 0,
+    "source": "pocket"
+  },
   "3198490760": {
     "time_read": "2021-05-16",
     "title": "The True Meaning of Technical Debt \ud83d\udcb8",
