@@ -1881,35 +1881,6 @@
     "favorite": 0,
     "source": "pocket"
   },
-  "2836684751": {
-    "time_read": "2020-01-14",
-    "title": "KISS, DRY, and Code Principles Every Developer Should Follow",
-    "author": [
-      "Mahdhi Rezvi"
-    ],
-    "link": "https://medium.com/better-programming/kiss-dry-and-code-principles-every-developer-should-follow-b77d89f51d74",
-    "tags": [
-      "programming--tips"
-    ],
-    "annotations": [
-      "This principle states that a piece of code should be implemented in just one place in the source code. ",
-      "One good example of SoC is the MVC Architecture. ",
-      "SoC (Separation of Concerns)",
-      "DRY (Don\u2019t Repeat Yourself)",
-      "you\u2019ll waste valuable time trying to speed up a function that isn\u2019t as slow as you think or doesn\u2019t get called as often as you\u2019d expect.",
-      "The opposite of DRY code is WET code: write everything twice",
-      "People tend to write code that they may need in the future but not at the moment. These types of code increase the size of your program unnecessarily, as the written code is never implemented",
-      "Avoid Premature Optimization",
-      "The problem with premature optimization is that you can never really know where a program\u2019s bottlenecks will be until after the fact",
-      "Your code should evolve from ordinary functioning code to clean, efficient, understandable and maintainable code. ",
-      "SoC principle is all about minding your own business \u2014 literally. This principle advises you to partition your complex code into different sections or domains. Each section is independent of each other, and that\u2019s why each section can be tackled independently. Also, it becomes easier to maintain, update, and reuse the code.",
-      "YAGNI (You Aren\u2019t Gonna Need It)",
-      "If you have a complex piece of code, always try to break it into smaller more maintainable code",
-      "KISS (Keep It Simple Stupid)"
-    ],
-    "favorite": 1,
-    "source": "pocket"
-  },
   "2836109417": {
     "time_read": "2020-01-06",
     "title": "Read This If You\u2019re Going Through Adversity",
