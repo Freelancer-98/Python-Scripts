@@ -143,7 +143,13 @@
       "product__management",
       "psychology"
     ],
-    "annotations": [],
+    "annotations": [
+      " Product is a hits game \u2013 successful features are far and few but they produce a step change in engagement, and those are the most critical to build. The corollary to this is that most new features won\u2019t move the needle, and it\u2019s important to get rid of them. This plan to remove existing features is what I call the anti-product roadmap.",
+      "Reducing technical complexity: More features mean more development time spent on maintenance. New additions to the product will break existing features, test cases will become longer and more complex, and code refactors will be more frequently needed. For many mature products, it\u2019s not uncommon for 50%+ of development time being spent on maintenance.",
+      "Culture of experimentation: Any healthy growing company has more ideas than bandwidth-to-build. To maximize throughput of ideas and out execute competition, product teams should aim to get ideas out to a small fraction of users quickly and get usage data before deciding whether to include the feature for all users. Facebook has changed user profile pages several times over the last few years getting rid of old features to make way for new ones (remember old features like stickers, favorite quotes or gifts?)",
+      "Higher odds of new feature success: An often-seen consequence of new features getting added to existing products is that these new features get relegated to the background because existing features take up all the prime real estate. This leads to lower discoverability and consequently lesser odds of driving user engagement",
+      "Simplicity: The world\u2019s most successful products are fanatical about having a clean user experience (Whatsapp, Dropbox, Snapchat). Too much choice creates user confusion and frustration leading to leaky conversion funnels. A simple, targeted product is the sign of a team that understands their users."
+    ],
     "favorite": 0,
     "source": "pocket"
   },
