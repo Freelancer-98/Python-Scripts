@@ -1,4 +1,89 @@
 {
+  "3219025813": {
+    "time_read": "2021-06-01",
+    "title": "My year in data",
+    "author": [],
+    "link": "https://samplesize.one/blog/posts/my_year_in_data/",
+    "tags": [
+      "productivity--tips",
+      "time__management"
+    ],
+    "annotations": [
+      "The moment I started, every day became an exercise in optimisation",
+      "This is already pretty cool, but the most important outcome of introducing these points is that I stopped thinking about productivity in binary terms. Before the points, whenever I was too tired to do work, my thinking process would go like this: \"Since I'm not doing work (bad), I might as well scroll some social media (also bad)\", while after the points this became \"Alright, I am too tired to do work (not gaining 4 points) but maybe I can read a book (3 points) or go for a walk and listen to a podcast (3 points) instead\"",
+      "Another important consideration is that 'hours spent on' is not a great measure of productivity - I want to achieve things and not just spend time doing busywork. To make sure that this is the case, I do weekly summaries, where I compare what I wanted to accomplish vs what I actually did accomplish in the past week and plan for the upcoming week.",
+      "As I was analysing at my data throughout the year, I was quite disappointed in how little I worked and was looking for a way to increase it. Inspired by this post I decided to gamify my productivity by giving myself points for activities I wanted to do more of. I was hoping that they would act as sources of instantenous pleasure for my monkey brain (which wants fun now and doesn't really care about future me) to make it do things that might be less fun but beneficial in the long run. "
+    ],
+    "favorite": 0,
+    "source": "pocket"
+  },
+  "3198490760": {
+    "time_read": "2021-05-16",
+    "title": "The True Meaning of Technical Debt \ud83d\udcb8",
+    "author": [
+      "Luca Rossi"
+    ],
+    "link": "https://refactoring.fm/p/the-true-meaning-of-technical-debt",
+    "tags": [
+      "product__management"
+    ],
+    "annotations": [
+      "Increasing Design effort brings diminishing results after a while, so it's up to you to find the sweet spot, based on how solid is your company planning vs how much change you can expect in the future.",
+      "Ward describes debt as the natural result of writing code about something we don't have a proper understanding of.\nHe doesn't talk of poor code \u2014 which he says accounts for a very minor share of debt.\nHe talks of disagreement between business needs and how the software has been written.",
+      "Actually learning along the way \u2014 analyze, with the help of stakeholders, what still fits and what is going to become debt.",
+      "It's intuitive and backed by common sense \u2014 something that piles up and makes you slower and slower, just like interest on existing debt.",
+      "Spending regular time on refactoring \u2014 reorganize the code periodically to reflect your updated understanding. This is easy to dismiss, letting the debt pile up until it\u2019s too late and you need a big rewrite. Taking baby steps every time is more sustainable both for your business, and your development team.",
+      "A thorough Design phase provides limited protection against future changes, so a leaner cycle might work better",
+      "Rapid Evolution \u2014 we built the right thing, but the landscape changed quickly and made it obsolete.",
+      "Wrong Design \u2014 what we built was wrong from the start!",
+      "Requirements may still be met on the surface, but something is wrong under the hood \u2014 an abstraction that doesn't fit, some duplication, scalability issues, and so on.",
+      "even if we build the right thing, it risks becoming obsolete fast, because of the ever-changing business landscape."
+    ],
+    "favorite": 0,
+    "source": "pocket"
+  },
+  "3321687207": {
+    "time_read": "2021-05-16",
+    "title": "Hosting SQLite databases on Github Pages",
+    "author": [],
+    "link": "https://phiresky.github.io/blog/2021/hosting-sqlite-databases-on-github-pages/",
+    "tags": [
+      "programming__database",
+      "web__devops"
+    ],
+    "annotations": [
+      "The above query should do 10-20 GET requests, fetching a total of 130 - 270KiB, depending on if you ran the above demos as well. Note that it only has to do 20 requests and not 270 (as would be expected when fetching 270 KiB with 1 KiB at a time). That\u2019s because I implemented a pre-fetching system that tries to detect access patterns through three separate virtual read heads and exponentially increases the request size for sequential reads. This means that index scans or table scans reading more than a few KiB of data will only cause a number of requests that is logarithmic in the total byte length of the scan. ",
+      "All of this only works well when we have indices in the database that match the queries well. For example, the index used in the above query is a INDEX ON wdi_data (indicator_code, country_code, year, value). If that index did not include the value column, the SQLite engine would have to do another random access (unpredictable) read and thus HTTP request to retrieve the actual value for every data point. If the index was ordered country_code, indicator_code, ..., then we would be able to quickly get all indicators for a single country, but not all country values of a single indicator.",
+      "Since fetching data via HTTP has a pretty large overhead, we need to fetch data in chunks and find some balance between the number of requests and the used bandwidth. Thankfully, SQLite already organizes its database in \"pages\" with a user-defined page size (4 KiB by default). I\u2019ve set the page size to 1 KiB for this database.",
+      "From SQLite\u2019s perspective, it just looks like it\u2019s living on a normal computer with an empty filesystem except for a file called /wdi.sqlite3 that it can read from. Of course it can\u2019t write to this file, but a read-only database is still very useful.",
+      "sql.js only allows you to create and read from databases that are fully in memory though - so I implemented a virtual file system that fetches chunks of the database with HTTP Range requests when SQLite tries to read from the filesystem: sql.js-httpvfs.",
+      "So how do you use a database on a static file hoster? Firstly, SQLite (written in C) is compiled to WebAssembly. SQLite can be compiled with emscripten without any modifications, and the sql.js library is a thin JS wrapper around the wasm code."
+    ],
+    "favorite": 0,
+    "source": "pocket"
+  },
+  "2637134274": {
+    "time_read": "2021-05-03",
+    "title": "A few things I wish I knew before I started working as a software engineer",
+    "author": [
+      "Shubheksha Jalan"
+    ],
+    "link": "https://shubheksha.com/posts/2019/06/a-few-things-i-wish-i-knew-before-i-started-working-as-a-software-engineer/",
+    "tags": [
+      "career--tips"
+    ],
+    "annotations": [
+      "Here\u2019s what to look for in good leader: kindness, empathy, emotional intelligence. They should be good listeners, be your advocate where possible, help you advocate for yourself and help you do what\u2019s best for your career even when it\u2019s uncomfortable.",
+      "Avoid bad managers/jobs (if you can):",
+      "In the long run, it does more harm than good in the sense that the effects of a toxic job outlive the job itself.",
+      "Invest in building a network early on",
+      "Building software is so much more than writing code",
+      "The importance of good leaders",
+      "Most of the time, the hardest problem is figuring out what code to write and ensuring we\u2019re solving the correct problem rather than figuring out how to write it. The latter is much easier than figuring out the former. Estimation and prioritisation is also super hard. Being a software engineer isn\u2019t about sitting in a corner and writing code all day. It\u2019s an inherently collaborative process that needs a wide variety of skills, especially people skills. "
+    ],
+    "favorite": 0,
+    "source": "pocket"
+  },
   "2936982718": {
     "time_read": "2021-04-16",
     "title": "We Get, and Give, Lots of Bad Advice. Here\u2019s How to Stop.",
@@ -8,7 +93,7 @@
     "link": "https://www.nytimes.com/2020/04/02/smarter-living/how-to-give-better-advice.html",
     "tags": [
       "career--tips",
-      "life-tips",
+      "life--tips",
       "psychology"
     ],
     "annotations": [
@@ -58,7 +143,13 @@
       "product__management",
       "psychology"
     ],
-    "annotations": [],
+    "annotations": [
+      " Product is a hits game \u2013 successful features are far and few but they produce a step change in engagement, and those are the most critical to build. The corollary to this is that most new features won\u2019t move the needle, and it\u2019s important to get rid of them. This plan to remove existing features is what I call the anti-product roadmap.",
+      "Reducing technical complexity: More features mean more development time spent on maintenance. New additions to the product will break existing features, test cases will become longer and more complex, and code refactors will be more frequently needed. For many mature products, it\u2019s not uncommon for 50%+ of development time being spent on maintenance.",
+      "Culture of experimentation: Any healthy growing company has more ideas than bandwidth-to-build. To maximize throughput of ideas and out execute competition, product teams should aim to get ideas out to a small fraction of users quickly and get usage data before deciding whether to include the feature for all users. Facebook has changed user profile pages several times over the last few years getting rid of old features to make way for new ones (remember old features like stickers, favorite quotes or gifts?)",
+      "Higher odds of new feature success: An often-seen consequence of new features getting added to existing products is that these new features get relegated to the background because existing features take up all the prime real estate. This leads to lower discoverability and consequently lesser odds of driving user engagement",
+      "Simplicity: The world\u2019s most successful products are fanatical about having a clean user experience (Whatsapp, Dropbox, Snapchat). Too much choice creates user confusion and frustration leading to leaky conversion funnels. A simple, targeted product is the sign of a team that understands their users."
+    ],
     "favorite": 0,
     "source": "pocket"
   },
@@ -89,9 +180,9 @@
     "time_read": "2021-04-14",
     "title": "Gatsby vs Next.js in 2021 - What, Why and When?",
     "author": [
-      "Jamees Bedford"
+      "James Bedford"
     ],
-    "link": "https://www.jame.es/gatsby-vs-next-js-2021/",
+    "link": "https://www.jame.es/gatsby-vs-next-js-2021",
     "tags": [
       "web__frontend",
       "web__performance"
@@ -169,7 +260,9 @@
   "108565326": {
     "time_read": "2021-04-11",
     "title": "How Will You Measure Your Life?",
-    "author": [],
+    "author": [
+      "Clayton M. Christensen"
+    ],
     "link": "https://hbr.org/2010/07/how-will-you-measure-your-life",
     "tags": [
       "life--tips"
@@ -274,7 +367,9 @@
   "2993377125": {
     "time_read": "2021-04-11",
     "title": "Want to Be More Productive? Try Doing Less.",
-    "author": [],
+    "author": [
+      "Kate Northrup"
+    ],
     "link": "https://hbr.org/2020/05/want-to-be-more-productive-try-doing-less",
     "tags": [
       "productivity--tips"
@@ -485,7 +580,10 @@
   "3147321058": {
     "time_read": "2021-01-08",
     "title": "How Apple Is Organized for Innovation",
-    "author": [],
+    "author": [
+      "Morten T. Hansen",
+      "Joel M. Podolny"
+    ],
     "link": "https://hbr.org/2020/11/how-apple-is-organized-for-innovation",
     "tags": [
       "business__management",
@@ -598,7 +696,7 @@
     "time_read": "2020-10-27",
     "title": "How to Overcome Loneliness",
     "author": [
-      "Editorial Process"
+      "Evidence-Based"
     ],
     "link": "https://markmanson.net/how-to-overcome-loneliness",
     "tags": [
@@ -1016,9 +1114,7 @@
   "2993633582": {
     "time_read": "2020-06-11",
     "title": "The IKEA effect",
-    "author": [
-      "Dimitris Karapanos"
-    ],
+    "author": [],
     "link": "https://stitcher.io/blog/the-ikea-effect",
     "tags": [
       "psychology__bias"
@@ -1121,7 +1217,7 @@
     "author": [
       "Jason Brownlee"
     ],
-    "link": "http://machinelearningmastery.com/classification-and-regression-trees-for-machine-learning/",
+    "link": "https://machinelearningmastery.com/classification-and-regression-trees-for-machine-learning/",
     "tags": [
       "programming__ml"
     ],
@@ -1212,7 +1308,7 @@
     "time_read": "2020-03-17",
     "title": "The Meaning of Life Is a Ham Sandwich",
     "author": [
-      "Mark Manson"
+      "Theory"
     ],
     "link": "https://markmanson.net/the-meaning-of-life",
     "tags": [
@@ -1240,7 +1336,7 @@
     "time_read": "2020-03-17",
     "title": "Life Is a Video Game\u2014Here Are the Cheat Codes",
     "author": [
-      "Editorial Process"
+      "Evidence-Based"
     ],
     "link": "https://markmanson.net/life-cheat-codes",
     "tags": [
@@ -1745,7 +1841,9 @@
   "2856968914": {
     "time_read": "2020-01-20",
     "title": "Three Steps To Get Up To Speed On Any Subject Quickly",
-    "author": [],
+    "author": [
+      "Nir Eyal"
+    ],
     "link": "https://getpocket.com/explore/item/three-steps-to-get-up-to-speed-on-any-subject-quickly",
     "tags": [],
     "annotations": [
@@ -1789,39 +1887,12 @@
     "favorite": 0,
     "source": "pocket"
   },
-  "2836684751": {
-    "time_read": "2020-01-14",
-    "title": "KISS, DRY, and Code Principles Every Developer Should Follow",
-    "author": [
-      "Mahdhi Rezvi"
-    ],
-    "link": "https://medium.com/better-programming/kiss-dry-and-code-principles-every-developer-should-follow-b77d89f51d74",
-    "tags": [
-      "programming--tips"
-    ],
-    "annotations": [
-      "This principle states that a piece of code should be implemented in just one place in the source code. ",
-      "One good example of SoC is the MVC Architecture. ",
-      "SoC (Separation of Concerns)",
-      "DRY (Don\u2019t Repeat Yourself)",
-      "you\u2019ll waste valuable time trying to speed up a function that isn\u2019t as slow as you think or doesn\u2019t get called as often as you\u2019d expect.",
-      "The opposite of DRY code is WET code: write everything twice",
-      "People tend to write code that they may need in the future but not at the moment. These types of code increase the size of your program unnecessarily, as the written code is never implemented",
-      "Avoid Premature Optimization",
-      "The problem with premature optimization is that you can never really know where a program\u2019s bottlenecks will be until after the fact",
-      "Your code should evolve from ordinary functioning code to clean, efficient, understandable and maintainable code. ",
-      "SoC principle is all about minding your own business \u2014 literally. This principle advises you to partition your complex code into different sections or domains. Each section is independent of each other, and that\u2019s why each section can be tackled independently. Also, it becomes easier to maintain, update, and reuse the code.",
-      "YAGNI (You Aren\u2019t Gonna Need It)",
-      "If you have a complex piece of code, always try to break it into smaller more maintainable code",
-      "KISS (Keep It Simple Stupid)"
-    ],
-    "favorite": 1,
-    "source": "pocket"
-  },
   "2836109417": {
     "time_read": "2020-01-06",
     "title": "Read This If You\u2019re Going Through Adversity",
-    "author": [],
+    "author": [
+      "Darius Foroux"
+    ],
     "link": "https://getpocket.com/explore/item/read-this-if-you-re-going-through-adversity",
     "tags": [
       "psychology"
